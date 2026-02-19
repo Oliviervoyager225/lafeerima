@@ -102,7 +102,12 @@
   cursor: pointer;
 }
 
-@media (max-width: 960px) {
+/* ========================================
+   RESPONSIVE DESIGN - Mobile, Tablette, Petits écrans
+   ======================================== */
+
+/* Tablettes et petits écrans (max-width: 968px) */
+@media (max-width: 968px) {
   .nav-toggle {
     display: inline-flex;
   }
@@ -119,6 +124,7 @@
     gap: 12px;
     box-shadow: var(--card-shadow);
     display: none;
+    z-index: 100;
   }
 
   .nav-links.open {
@@ -127,5 +133,112 @@
 
   .nav-actions {
     display: none;
+  }
+
+  .brand-logo {
+    width: 65px;
+    height: 65px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding: 8px 0 8px 20px;
+    margin-top: 8px;
+  }
+}
+
+/* Tablettes portrait et grands mobiles (max-width: 768px) */
+@media (max-width: 768px) {
+  .nav-row {
+    padding: 12px 0;
+  }
+
+  .brand-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-links {
+    top: 65px;
+    padding: 14px 20px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .dropdown-menu {
+    min-width: 100%;
+  }
+
+  .dropdown-item {
+    font-size: 0.85rem;
+    padding: 7px 9px;
+  }
+}
+
+/* Mobile (max-width: 640px) */
+@media (max-width: 640px) {
+  .nav-row {
+    padding: 10px 0;
+  }
+
+  .brand-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .nav-links {
+    top: 60px;
+    padding: 12px 15px;
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .nav-toggle {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-menu {
+    padding: 6px 0 6px 18px;
+    margin-top: 6px;
+  }
+
+  .dropdown-item {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+}
+
+/* Très petits mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+  .nav-row {
+    padding: 8px 0;
+  }
+
+  .brand-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-links {
+    top: 55px;
+    padding: 10px 12px;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .nav-toggle {
+    padding: 5px 12px;
+    font-size: 0.85rem;
   }
 }

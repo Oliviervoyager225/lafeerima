@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Preadmission from './pages/Preadmission';
 import Historique from './pages/Historique';
-import Professionals from './pages/Professionals';
 import './App.css';
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/preadmission" element={<Preadmission />} />
           <Route path="/historique" element={<Historique />} />
-          <Route path="/professionnels" element={<Professionals />} />
         </Routes>
       </div>
     </BrowserRouter>

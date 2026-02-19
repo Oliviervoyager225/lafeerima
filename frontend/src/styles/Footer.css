@@ -53,3 +53,124 @@
 .site-footer p {
   color: var(--ink-700);
 }
+
+/* ========================================
+   RESPONSIVE DESIGN - Mobile, Tablette, Petits écrans
+   ======================================== */
+
+/* Tablettes et petits écrans (max-width: 968px) */
+@media (max-width: 968px) {
+  .site-footer {
+    padding: 35px 0 50px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+}
+
+/* Tablettes portrait et grands mobiles (max-width: 768px) */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 30px 0 40px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .footer-brand {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .site-footer h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .site-footer ul {
+    gap: 6px;
+    font-size: 0.9rem;
+  }
+
+  .social {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile (max-width: 640px) */
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 25px 0 35px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .socials {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .social {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  .site-footer h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .site-footer ul {
+    gap: 5px;
+    font-size: 0.85rem;
+  }
+
+  .site-footer p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Très petits mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 20px 0 30px;
+  }
+
+  .footer-grid {
+    gap: 15px;
+  }
+
+  .site-footer h4 {
+    font-size: 0.95rem;
+  }
+
+  .site-footer ul {
+    font-size: 0.8rem;
+  }
+
+  .site-footer p {
+    font-size: 0.8rem;
+  }
+
+  .social {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+}

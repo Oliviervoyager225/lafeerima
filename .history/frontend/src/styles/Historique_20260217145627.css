@@ -1,0 +1,254 @@
+.historique-page {
+  background: #F2EFE9;
+  color: #222;
+  min-height: 100vh;
+}
+
+.historique-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 0 32px 0;
+  background: #fff;
+}
+.historique-hero-content {
+  flex: 1;
+  padding-left: 5vw;
+}
+.historique-hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.historique-hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+.historique-btn {
+  background: #c4d82e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  margin-right: 16px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.historique-btn-secondary {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.historique-hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.historique-image-placeholder {
+  width: 320px;
+  height: 320px;
+  background: #d1d5db;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.historique-section {
+  background: #F2EFE9;
+  padding: 40px 0;
+}
+.historique-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+.historique-cards-row {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+.historique-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 24px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.historique-card-image {
+  width: 120px;
+  height: 120px;
+  background: #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.historique-link {
+  color: #c4d82e;
+  font-weight: 600;
+  margin-top: 12px;
+  text-decoration: none;
+}
+
+.historique-flex {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+.historique-flex-content {
+  flex: 1;
+}
+.historique-flex-image {
+  width: 260px;
+  height: 180px;
+  background: #d1d5db;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.historique-quote {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 32px;
+  margin: 0 auto;
+  max-width: 700px;
+}
+.historique-quote-icon {
+  font-size: 3rem;
+  color: #c4d82e;
+}
+
+.historique-logos-row {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px 0;
+}
+.historique-logo {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2.2rem;
+  color: #222;
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.historique-footer {
+  background: #222;
+  color: #fff;
+  padding: 48px 0 24px 0;
+}
+.historique-footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.historique-footer-left {
+  flex: 1;
+}
+.historique-footer-left h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.historique-footer-right {
+  flex: 2;
+}
+.historique-footer-table {
+  display: flex;
+  gap: 32px;
+}
+.historique-footer-table h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+.historique-footer-table ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.historique-footer-table li {
+  margin-bottom: 8px;
+}
+.historique-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  font-size: 0.95rem;
+  color: #c4d82e;
+}
+
+@media (max-width: 900px) {
+  .historique-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 0;
+  }
+  .historique-hero-image {
+    margin-top: 24px;
+  }
+  .historique-cards-row, .historique-logos-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .historique-flex {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .historique-footer-main {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .historique-footer-table {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .historique-page {
+    padding: 0 2vw;
+  }
+  .historique-hero-content h1 {
+    font-size: 1.3rem;
+  }
+  .historique-section h2 {
+    font-size: 1.2rem;
+  }
+  .historique-card {
+    width: 100%;
+    padding: 12px;
+  }
+  .historique-flex-image {
+    width: 100%;
+    height: 120px;
+  }
+  .historique-quote {
+    padding: 16px;
+    max-width: 98vw;
+  }
+  .historique-logo {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+  .historique-footer {
+    padding: 24px 0 12px 0;
+  }
+  .historique-footer-bottom {
+    font-size: 0.8rem;
+  }
+}

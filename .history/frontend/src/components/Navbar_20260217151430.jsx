@@ -4,7 +4,7 @@ import '../styles/Navbar.css';
 
 const dropdownItems = [
   { label: 'Historique', to: '/historique' },
-  { label: 'Les professionnels', to: '/professionnels' },
+  { label: 'Les professionnels', to: '#' },
   { label: 'Nos valeurs', to: '#' },
   { label: 'Notre engagement qualite', to: '#' },
   { label: 'RSE', to: '#' },
@@ -22,19 +22,6 @@ export default function Navbar() {
     if (!event.currentTarget.contains(event.relatedTarget)) {
       setDropdownOpen(false);
     }
-  };
-
-  const handleScrollToActualites = () => {
-    if (location.pathname === '/') {
-      const el = document.getElementById('actualites');
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      navigate('/', { state: { scrollToActualites: true } });
-    }
-    setDropdownOpen(false);
-    setNavOpen(false);
   };
 
   return (
@@ -73,23 +60,13 @@ export default function Navbar() {
             </button>
             <div className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
               {dropdownItems.map((item) => (
-                item.label === 'Actualites' ? (
-                  <button
-                    key={item.label}
-                    className="dropdown-item"
-                    onClick={handleScrollToActualites}
-                    style={{ background: 'none', border: 'none', textAlign: 'left', width: '100%', cursor: 'pointer' }}
-                  >
-                    Actualités
-                  </button>
-                ) :
-                  item.to && item.to !== '#' ? (
-                    <Link key={item.label} to={item.to} className="dropdown-item">
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <span key={item.label} className="dropdown-item">{item.label}</span>
-                  )
+                item.to && item.to !== '#' ? (
+                  <Link key={item.label} to={item.to} className="dropdown-item">
+                    {item.label}
+                  </Link>
+                ) : (
+                  <span key={item.label} className="dropdown-item">{item.label}</span>
+                )
               ))}
             </div>
           </div>
@@ -98,7 +75,22 @@ export default function Navbar() {
           <button
             className="nav-link"
             style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
-            onClick={handleScrollToActualites}
+            onClick={() => {
+              if (location.pathname === '/') {
+                const el = document.getElementById('actualites');
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth' });
+                }
+              } else {
+                navigate('/');
+                setTimeout(() => {
+                  const el = document.getElementById('actualites');
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }, 300);
+              }
+            }}
           >
             Actualités
           </button>

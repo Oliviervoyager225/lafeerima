@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -11,6 +10,7 @@ import '../styles/FooterSection.css';
 import TypingBubble from '../components/TypingBubble';
 import LeafletMap from '../components/LeafletMap';
 
+import '../styles/SpecialtiesBgFix.css';
 
 const fallbackNews = [
   {
@@ -107,8 +107,6 @@ const fallbackNews = [
 ];
 
 export default function Home() {
-  const location = useLocation();
-  const navigate = useNavigate();
   const [newsItems, setNewsItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState(null);
@@ -190,22 +188,9 @@ export default function Home() {
         setLoading(false);
       }
     };
+
     loadNews();
   }, []);
-
-  // Scroll to actualites if state.scrollToActualites is set
-  useEffect(() => {
-    if (location.state && location.state.scrollToActualites) {
-      const el = document.getElementById('actualites');
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }, 200);
-      }
-      // Clean up state so it doesn't scroll again on back/forward
-      navigate(location.pathname, { replace: true, state: {} });
-    }
-  }, [location, navigate]);
 
   const displayedNews = newsItems.length > 0 ? newsItems : fallbackNews;
 
@@ -288,11 +273,11 @@ export default function Home() {
         </section>
 
 
-        <section className="info-section-fullwidth" id="actualites">
+        <section className="info-section-fullwidth">
           <div className="container">
             {/* Full Width News Panel - Pink background */}
             <div className="news-panel-fullwidth">
-              <h3 className="news-title-fullwidth">Nos différentes actualités</h3>
+              <h3 className="news-title-fullwidth">Nos dernières actualités</h3>
 
               {/* News Cards in horizontal row with navigation */}
               <div className="news-carousel-wrapper">

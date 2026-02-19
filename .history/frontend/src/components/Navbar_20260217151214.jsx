@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 
 const dropdownItems = [
   { label: 'Historique', to: '/historique' },
-  { label: 'Les professionnels', to: '/professionnels' },
+  { label: 'Les professionnels', to: '#' },
   { label: 'Nos valeurs', to: '#' },
   { label: 'Notre engagement qualite', to: '#' },
   { label: 'RSE', to: '#' },
@@ -13,8 +13,6 @@ const dropdownItems = [
 ];
 
 export default function Navbar() {
-  const navigate = useNavigate();
-  const location = useLocation();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
 
@@ -22,19 +20,6 @@ export default function Navbar() {
     if (!event.currentTarget.contains(event.relatedTarget)) {
       setDropdownOpen(false);
     }
-  };
-
-  const handleScrollToActualites = () => {
-    if (location.pathname === '/') {
-      const el = document.getElementById('actualites');
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      navigate('/', { state: { scrollToActualites: true } });
-    }
-    setDropdownOpen(false);
-    setNavOpen(false);
   };
 
   return (
@@ -73,35 +58,19 @@ export default function Navbar() {
             </button>
             <div className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
               {dropdownItems.map((item) => (
-                item.label === 'Actualites' ? (
-                  <button
-                    key={item.label}
-                    className="dropdown-item"
-                    onClick={handleScrollToActualites}
-                    style={{ background: 'none', border: 'none', textAlign: 'left', width: '100%', cursor: 'pointer' }}
-                  >
-                    Actualités
-                  </button>
-                ) :
-                  item.to && item.to !== '#' ? (
-                    <Link key={item.label} to={item.to} className="dropdown-item">
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <span key={item.label} className="dropdown-item">{item.label}</span>
-                  )
+                item.to && item.to !== '#' ? (
+                  <Link key={item.label} to={item.to} className="dropdown-item">
+                    {item.label}
+                  </Link>
+                ) : (
+                  <span key={item.label} className="dropdown-item">{item.label}</span>
+                )
               ))}
             </div>
           </div>
           <a href="#" className="nav-link">L offre de soins <svg className="dropdown-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M7 10l5 5 5-5z" /></svg></a>
           <a href="#" className="nav-link">Vos droits <svg className="dropdown-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M7 10l5 5 5-5z" /></svg></a>
-          <button
-            className="nav-link"
-            style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
-            onClick={handleScrollToActualites}
-          >
-            Actualités
-          </button>
+          <Link to="/#actualites" className="nav-link">Actualités</Link>
           <a href="#" className="nav-link">FAQ <svg className="dropdown-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M7 10l5 5 5-5z" /></svg></a>
           <a href="#" className="nav-link">Ressources <svg className="dropdown-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M7 10l5 5 5-5z" /></svg></a>
         </nav>

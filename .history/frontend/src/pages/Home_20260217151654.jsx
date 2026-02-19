@@ -292,7 +292,7 @@ export default function Home() {
           <div className="container">
             {/* Full Width News Panel - Pink background */}
             <div className="news-panel-fullwidth">
-              <h3 className="news-title-fullwidth">Nos différentes actualités</h3>
+              <h3 className="news-title-fullwidth">Nos dernières actualités</h3>
 
               {/* News Cards in horizontal row with navigation */}
               <div className="news-carousel-wrapper">

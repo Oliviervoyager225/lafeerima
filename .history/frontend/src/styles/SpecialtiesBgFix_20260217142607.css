@@ -1,0 +1,14 @@
+.services-section {
+  background: #F2EFE9 !important;
+}
+
+.specialties-grid-section {
+  background: #F2EFE9 !important;
+}
+
+/* Optionally, add padding if needed for visual separation */
+.services-section,
+.specialties-grid-section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}

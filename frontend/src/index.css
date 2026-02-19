@@ -37,6 +37,7 @@ body {
   min-height: 100vh;
   background: var(--page-bg);
   color: var(--ink-900);
+  overflow-x: hidden;
 }
 
 a {
@@ -97,4 +98,84 @@ button {
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: var(--soft-shadow);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - Mobile, Tablette, Petits écrans
+   ======================================== */
+
+/* Tablettes et petits écrans (max-width: 968px) */
+@media (max-width: 968px) {
+  .container {
+    width: min(1120px, 94%);
+  }
+
+  .btn {
+    padding: 11px 20px;
+    font-size: 0.95rem;
+  }
+
+  .btn.primary.small {
+    padding: 9px 16px;
+  }
+}
+
+/* Tablettes portrait et grands mobiles (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    width: min(1120px, 95%);
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  .btn.primary.small {
+    padding: 8px 15px;
+  }
+}
+
+/* Mobile (max-width: 640px) */
+@media (max-width: 640px) {
+  :root {
+    font-size: 15px;
+  }
+
+  .container {
+    width: min(1120px, 96%);
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .btn.primary.small {
+    padding: 8px 14px;
+  }
+
+  .btn.primary.full {
+    margin-top: 14px;
+  }
+}
+
+/* Très petits mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .container {
+    width: min(1120px, 98%);
+  }
+
+  .btn {
+    padding: 9px 14px;
+    font-size: 0.85rem;
+  }
+
+  .btn.primary.small {
+    padding: 7px 12px;
+  }
 }

@@ -42,22 +42,22 @@
     max-width: 95vw;
   }
   .typing-bubble.small {
-    width: 16px;
-    height: 16px;
-    left: 54%;
-    top: 18%;
+    width: 14px;
+    height: 14px;
+    left: 60%;
+    top: 22%;
   }
   .typing-bubble.medium {
-    width: 32px;
-    height: 32px;
-    left: 60%;
-    top: 12%;
+    width: 28px;
+    height: 28px;
+    left: 65%;
+    top: 18%;
   }
   .typing-bubble.large {
-    width: 52px;
-    height: 52px;
-    left: 68%;
-    top: 4%;
+    width: 44px;
+    height: 44px;
+    left: 70%;
+    top: 10%;
   }
 }
 
@@ -92,22 +92,22 @@
     font-size: 1rem;
   }
   .typing-bubble.small {
-    width: 10px;
-    height: 10px;
-    left: 52%;
-    top: 16%;
+    width: 8px;
+    height: 8px;
+    left: 60%;
+    top: 18%;
   }
   .typing-bubble.medium {
-    width: 18px;
-    height: 18px;
-    left: 60%;
-    top: 8%;
+    width: 16px;
+    height: 16px;
+    left: 68%;
+    top: 12%;
   }
   .typing-bubble.large {
-    width: 28px;
-    height: 28px;
-    left: 70%;
-    top: 0%;
+    width: 24px;
+    height: 24px;
+    left: 75%;
+    top: 5%;
   }
   .typing-text-container {
     font-size: 0.98rem;

@@ -176,11 +176,23 @@
     padding-left: 8px;
 }
 
-/* Responsive Design */
+/* ========================================
+   RESPONSIVE DESIGN - Mobile, Tablette, Petits écrans
+   ======================================== */
+
+/* Tablettes et petits écrans (max-width: 968px) */
 @media (max-width: 968px) {
+    .footer-section {
+        padding: 40px 0;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 35px;
+    }
+
+    .footer-center {
+        margin-top: 0;
     }
 
     .footer-left,
@@ -192,5 +204,234 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .center-carousel {
+        height: 220px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .footer-description {
+        max-width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+}
+
+/* Tablettes portrait et grands mobiles (max-width: 768px) */
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 35px 0;
+    }
+
+    .footer-grid {
+        gap: 30px;
+    }
+
+    .footer-left h3,
+    .footer-right h3 {
+        font-size: 1.3rem;
+        margin-bottom: 18px;
+    }
+
+    .center-carousel {
+        height: 200px;
+        border-radius: 16px;
+    }
+
+    .footer-description {
+        padding: 20px 18px;
+        border-radius: 16px;
+        min-height: 180px;
+    }
+
+    .footer-description p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+        padding-top: 25px;
+    }
+
+    .footer-logos {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .footer-logo img {
+        max-width: 70px;
+    }
+
+    .social-link svg {
+        width: 34px;
+        height: 34px;
+    }
+
+    .footer-social img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .footer-nav a {
+        font-size: 0.95rem;
+    }
+
+    .footer-nav li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Mobile (max-width: 640px) */
+@media (max-width: 640px) {
+    .footer-section {
+        padding: 30px 0;
+    }
+
+    .footer-grid {
+        gap: 25px;
+    }
+
+    .footer-left h3,
+    .footer-right h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .center-carousel {
+        height: 180px;
+        border-radius: 14px;
+        max-width: 100%;
+    }
+
+    .footer-center {
+        gap: 20px;
+    }
+
+    .footer-description {
+        padding: 18px 15px;
+        border-radius: 14px;
+        min-height: 160px;
+    }
+
+    .footer-description p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .footer-bottom {
+        margin-top: 25px;
+        padding-top: 20px;
+    }
+
+    .footer-logos {
+        gap: 25px;
+        flex-direction: column;
+    }
+
+    .footer-logo img {
+        max-width: 65px;
+    }
+
+    .footer-social {
+        gap: 15px;
+    }
+
+    .social-link svg {
+        width: 32px;
+        height: 32px;
+        padding: 3px;
+    }
+
+    .footer-social img {
+        width: 33px;
+        height: 33px;
+        border-radius: 8px;
+    }
+
+    .footer-nav a {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .footer-nav li {
+        margin-bottom: 8px;
+    }
+
+    .footer-nav a:hover {
+        padding-left: 5px;
+    }
+}
+
+/* Très petits mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+    .footer-section {
+        padding: 25px 0;
+    }
+
+    .footer-grid {
+        gap: 20px;
+    }
+
+    .footer-left h3,
+    .footer-right h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .center-carousel {
+        height: 160px;
+        border-radius: 12px;
+    }
+
+    .footer-center {
+        gap: 18px;
+    }
+
+    .footer-description {
+        padding: 15px 12px;
+        border-radius: 12px;
+        min-height: 140px;
+    }
+
+    .footer-description p {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        padding-top: 18px;
+    }
+
+    .footer-logos {
+        gap: 20px;
+    }
+
+    .footer-logo img {
+        max-width: 60px;
+    }
+
+    .footer-social {
+        gap: 12px;
+    }
+
+    .social-link svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .footer-social img {
+        width: 29px;
+        height: 29px;
+    }
+
+    .footer-nav a {
+        font-size: 0.85rem;
+    }
+
+    .footer-nav li {
+        margin-bottom: 6px;
     }
 }
