@@ -43,7 +43,7 @@ export default function Footer() {
         <div className="footer-center">
           <div className="footer-description">
             <p>
-              La Fée Rima est un centre spécialisé à Abidjan, dédier à l'accompagnement
+              La FéeRima est un centre spécialisé à Abidjan, dédier à l'accompagnement
               de la santé mentale des jeunes de 10 à 25 ans
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function Footer() {
 
         {/* Right Column - Navigation Links */}
         <div className="footer-right">
-          <h3>Le centre spécialisé Fée Rima</h3>
+          <h3>Le centre spécialisé FéeRima</h3>
           <ul className="footer-nav">
             <li><Link to="/">Accueil</Link></li>
             <li><Link to="/centre">Le centre spécialisé</Link></li>
@@ -67,7 +67,7 @@ export default function Footer() {
       <div className="container footer-bottom">
         <div className="footer-logos">
           <div className="footer-logo">
-            <img src="/assets/feerima/logo.png" alt="Fée Rima Logo" />
+            <img src="/assets/feerima/logo.png" alt="FéeRima Logo" />
           </div>
           <div className="footer-social">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-link">

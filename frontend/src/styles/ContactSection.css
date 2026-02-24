@@ -1,0 +1,142 @@
+/* ===== Contact Section (Image Reference Style) ===== */
+
+.contact-section-wrapper {
+    background-color: #ffffff;
+    /* White background like the image */
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+}
+
+@media (min-width: 900px) {
+    .contact-container {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 60px;
+    }
+}
+
+/* --- Left Column: Text & Button --- */
+.contact-text-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.contact-subtitle {
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+    font-size: clamp(1.05rem, 1.26vw + 0.84rem, 1.3125rem);
+    font-weight: 400;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.contact-main-title {
+    font-family: 'Arial', sans-serif;
+    font-size: clamp(1.75rem, 2.1vw + 1.05rem, 2.8rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: #c4d82e;
+    /* FéeRima brand color for the entire title */
+    margin: 0 0 24px 0;
+}
+
+.contact-main-title span.highlight {
+    color: #c4d82e;
+    display: block;
+}
+
+.contact-description {
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+    font-size: clamp(0.7rem, 0.84vw + 0.56rem, 0.875rem);
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 90%;
+    font-weight: 400;
+}
+
+.btn-contact {
+    background-color: #c4d82e;
+    /* Yellow-green from hero */
+    color: #333333;
+    border: none;
+    border-radius: 30px;
+    /* Pill shape like hero button */
+    padding: 10px 22px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.btn-contact:hover {
+    background-color: #b0c428;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(196, 216, 46, 0.4);
+}
+
+.btn-contact svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* --- Right Column: Map --- */
+.contact-map-col {
+    flex: 1;
+    border-radius: 20px;
+    /* Large rounded corners as in the image */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    position: relative;
+}
+
+/* Adjust the Leaflet map container to fill the new column */
+.contact-map-col .leaflet-container {
+    height: 100% !important;
+    width: 100% !important;
+    min-height: 400px;
+    /* Ensure a minimum height */
+    border-radius: 20px;
+    /* Map inherits the border radius */
+}
+
+/* Hide the old fullwidth map container elements we are replacing */
+.map-container-fullwidth {
+    display: none;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 900px) {
+    .contact-main-title {
+        font-size: 1.75rem;
+    }
+
+    .contact-description {
+        max-width: 100%;
+    }
+
+    .contact-map-col {
+        min-height: 350px;
+    }
+}

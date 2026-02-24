@@ -8,7 +8,9 @@ import '../styles/Home.css';
 import '../styles/InfoSection.css';
 import '../styles/InfoSectionFullwidth.css';
 import '../styles/FooterSection.css';
+import '../styles/ContactSection.css';
 import TypingBubble from '../components/TypingBubble';
+import QuotesBanner from '../components/QuotesBanner';
 import LeafletMap from '../components/LeafletMap';
 
 
@@ -217,8 +219,7 @@ export default function Home() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <h1 className="hero-title">
-                <span className="hero-title-brand">FeeRima</span>{' '}
-                <span className="hero-title-suffix">Care</span>
+                <span className="hero-title-brand">FeeRima</span>
               </h1>
               <p className="hero-subtitle">
                 Votre partenaire de confiance pour la santé mentale des jeunes et
@@ -239,7 +240,7 @@ export default function Home() {
               </div>
             </div>
             <div className="hero-card">
-              <p className="hero-card-title">À la Fée Rima</p>
+              <p className="hero-card-title">À la FéeRima</p>
               <p>Un accueil personnalisé et bienveillant</p>
             </div>
           </div>
@@ -271,17 +272,39 @@ export default function Home() {
         {/* Fond #F5EFE9 : de la quote bar jusqu'avant Nos spécialités */}
         <div className="quote-map-wrapper">
 
-          <section className="quote-bar">
-            <div className="quote-content">
-              "La guerison prend du temps et demander de l aide est une demarche courageuse"<span className="quote-author"> - Mariska Hargitay</span>
+          <QuotesBanner />
+
+          {/* --- New Contact Section --- */}
+          <section className="contact-section-wrapper">
+            <div className="contact-container">
+
+              {/* Left Column: Text & CTA */}
+              <div className="contact-text-col">
+                <span className="contact-subtitle">Bienvenue chez FéeRima</span>
+                <h2 className="contact-main-title">
+                  RAPIDE, FACILE & FIABLE
+                  <span className="highlight">CONTACTEZ-NOUS !</span>
+                </h2>
+                <p className="contact-description">
+                  Profitez d'un accompagnement personnalisé avec nos spécialistes.
+                  Un cadre chaleureux, une écoute active et des solutions adaptées
+                  à chaque situation.
+                </p>
+                <a href="tel:+212000000000" className="btn-contact">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  Appeler le cabinet
+                </a>
+              </div>
+
+              {/* Right Column: Map */}
+              <div className="contact-map-col">
+                <LeafletMap />
+              </div>
+
             </div>
           </section>
-
-          {/* Map Container - Interactive Leaflet + OpenStreetMap */}
-          <div className="map-container-fullwidth">
-            <h3 className="news-title-fullwidth map-title">Localisation</h3>
-            <LeafletMap />
-          </div>
 
         </div>
 
@@ -289,39 +312,99 @@ export default function Home() {
         <div className="services-section">
           <h2 className="services-main-title">Nos spécialités</h2>
 
-          {/* Bloc 1: Texte gauche, Image droite */}
+          {/* Bloc 1: Équipe pluridisciplinaire */}
           <div className="service-block-row">
             <div className="service-text-col">
-              <p>La Fée Rima propose un espace sûr pour les jeunes en difficultés psychiques. Nous offrons un accompagnement personnalisé dans un cadre bienveillant.</p>
-              <p>Nos espaces sont conçus pour favoriser le bien-être et la guérison. Des lieux adaptés pour l'échange.</p>
+              <h3>Équipe pluridisciplinaire</h3>
+              <p>Psychologues, éducateurs spécialisés, infirmiers-psy, pédopsychiatre, orthophoniste, art thérapeute, coach sportif, maîtresse de maison…</p>
               <button className="service-info-btn">Plus d'info</button>
             </div>
             <div className="service-image-col">
-              <img src="/assets/feerima/hero.png" alt="Centre" />
+              <img src="/assets/feerima/hero.png" alt="Équipe pluridisciplinaire" />
             </div>
           </div>
 
-          {/* Bloc 2: Image gauche, Texte droite */}
+          {/* Bloc 2: Approche personnalisée */}
           <div className="service-block-row reverse-row">
             <div className="service-image-col">
-              <img src="/assets/feerima/hero2.png" alt="Espace thérapeutique" />
+              <img src="/assets/feerima/hero2.png" alt="Approche personnalisée" />
             </div>
             <div className="service-text-col">
-              <p>Nous travaillons avec les meilleures pratiques en santé mentale. Nos équipes sont formées aux approches innovantes.</p>
-              <p>Un cadre professionnel et chaleureux pour accompagner chaque jeune.</p>
+              <h3>Approche personnalisée</h3>
+              <p>Un accompagnement adapté aux besoins et au rythme de chaque bénéficiaire, grâce à un projet personnalisé de soins comprenant consultations et ateliers thérapeutiques.</p>
               <button className="service-info-btn">Plus d'info</button>
             </div>
           </div>
 
-          {/* Bloc 3: Texte gauche, Image droite */}
+          {/* Bloc 3: Cadre bienveillant et sécurisé */}
           <div className="service-block-row">
             <div className="service-text-col">
-              <p>Nos programmes sont adaptés aux besoins spécifiques de chaque jeune. Une prise en charge globale.</p>
-              <p>Des activités variées pour favoriser l'épanouissement dans un environnement sécurisé.</p>
+              <h3>Cadre bienveillant et sécurisé</h3>
+              <p>Un lieu structuré où l’accueil est le premier soin et un lieu sûr où les droits, la sécurité et la confidentialité sont garantis pour les bénéficiaires et leurs familles.</p>
               <button className="service-info-btn">Plus d'info</button>
             </div>
             <div className="service-image-col">
-              <img src="/assets/feerima/hero3.png" alt="Activités" />
+              <img src="/assets/feerima/hero3.png" alt="Cadre bienveillant et sécurisé" />
+            </div>
+          </div>
+
+          {/* Bloc 4: Méthodes validées et innovantes */}
+          <div className="service-block-row reverse-row">
+            <div className="service-image-col">
+              <img src="/assets/feerima/hero4.png" alt="Méthodes validées et innovantes" />
+            </div>
+            <div className="service-text-col">
+              <h3>Méthodes validées et innovantes</h3>
+              <p>Des pratiques d’efficacité reconnues et mises à jour selon les avancées scientifiques, comme l’art-thérapie et les thérapies cognitivo-comportementales.</p>
+              <button className="service-info-btn">Plus d'info</button>
+            </div>
+          </div>
+
+          {/* Bloc 5: Place active des bénéficiaires */}
+          <div className="service-block-row">
+            <div className="service-text-col">
+              <h3>Place active des bénéficiaires</h3>
+              <p>Une participation des bénéficiaires à leur parcours de soins, dans le respect de leur rythme et de leurs capacités.</p>
+              <button className="service-info-btn">Plus d'info</button>
+            </div>
+            <div className="service-image-col">
+              <img src="/assets/feerima/hero.png" alt="Place active des bénéficiaires" />
+            </div>
+          </div>
+
+          {/* Bloc 6: Implication de la famille */}
+          <div className="service-block-row reverse-row">
+            <div className="service-image-col">
+              <img src="/assets/feerima/hero2.png" alt="Implication de la famille" />
+            </div>
+            <div className="service-text-col">
+              <h3>Implication de la famille</h3>
+              <p>Une collaboration étroite avec les familles tout au long de l’accompagnement.</p>
+              <button className="service-info-btn">Plus d'info</button>
+            </div>
+          </div>
+
+          {/* Bloc 7: Accessibilité */}
+          <div className="service-block-row">
+            <div className="service-text-col">
+              <h3>Accessibilité</h3>
+              <p>Prise en compte des réalités sociales et économiques locales pour rendre les soins disponibles à tous.</p>
+              <button className="service-info-btn">Plus d'info</button>
+            </div>
+            <div className="service-image-col">
+              <img src="/assets/feerima/hero3.png" alt="Accessibilité" />
+            </div>
+          </div>
+
+          {/* Bloc 8: Dimension communautaire */}
+          <div className="service-block-row reverse-row">
+            <div className="service-image-col">
+              <img src="/assets/feerima/hero4.png" alt="Dimension communautaire" />
+            </div>
+            <div className="service-text-col">
+              <h3>Dimension communautaire</h3>
+              <p>Actions de prévention de terrain, partenariats et intégration dans la société.</p>
+              <button className="service-info-btn">Plus d'info</button>
             </div>
           </div>
 

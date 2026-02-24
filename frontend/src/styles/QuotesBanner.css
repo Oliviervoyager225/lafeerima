@@ -1,0 +1,113 @@
+/* ===== Quotes Banner — Bande défilante des citations ===== */
+
+.quotes-banner {
+    background-color: #F5EFE9;
+    overflow: hidden;
+    padding: 18px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    position: relative;
+    width: 100%;
+}
+
+/* Fade edges left & right */
+.quotes-banner::before,
+.quotes-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.quotes-banner::before {
+    left: 0;
+    background: linear-gradient(to right, #F5EFE9, transparent);
+}
+
+.quotes-banner::after {
+    right: 0;
+    background: linear-gradient(to left, #F5EFE9, transparent);
+}
+
+/* Track — dupliqué ×2 pour boucle infinie */
+.quotes-track {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: max-content;
+    animation: scrollQuotes 260s linear infinite;
+    will-change: transform;
+}
+
+/* Pause au survol */
+.quotes-banner:hover .quotes-track {
+    animation-play-state: paused;
+}
+
+/* Chaque citation */
+.quote-item {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0 24px;
+    flex-shrink: 0;
+}
+
+.quote-text {
+    font-size: 0.88rem;
+    font-style: italic;
+    color: #4a3728;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.01em;
+}
+
+.quote-author {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #8B4513;
+    margin-left: 8px;
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+}
+
+.quote-separator {
+    color: #C89B7B;
+    font-size: 0.85rem;
+    margin-left: 24px;
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
+/* Animation */
+@keyframes scrollQuotes {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive — ralentir légèrement sur mobile */
+@media (max-width: 768px) {
+    .quotes-banner {
+        padding: 14px 0;
+    }
+
+    .quote-text {
+        font-size: 0.82rem;
+    }
+
+    .quote-author {
+        font-size: 0.78rem;
+    }
+
+    .quotes-track {
+        animation-duration: 320s;
+    }
+}

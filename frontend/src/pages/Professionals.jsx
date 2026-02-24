@@ -7,42 +7,75 @@ import '../styles/PageHero.css';
 const doctors = [
     {
         id: 1,
-        name: 'Dr. Glao Louis',
-        specialty: 'Psychiatre',
-        rating: 4.5,
-        reviews: 123,
-        image: '/assets/feerima/Image%20medecin%201.png',
-        available: true,
-        theme: 'cyan'
+        name: 'ALLO Valérie',
+        specialty: 'Infirmière spécialisée',
+        image: '/assets/feerima/hero.png', // Placholder image
     },
     {
         id: 2,
-        name: 'Dr. Emma Wilson',
-        specialty: 'Neurologue',
-        rating: 4.5,
-        reviews: 98,
-        image: '/assets/feerima/Image%20medecin%202.png',
-        available: true,
-        theme: 'green'
+        name: 'ALLOU Adeline Amena',
+        specialty: 'Infirmière',
+        image: '/assets/feerima/hero2.png',
     },
     {
         id: 3,
-        name: 'Dr. Molamine Hive',
-        specialty: 'Psychologue',
-        reviews: 215,
-        image: '/assets/feerima/Image%20medecin%203.png',
-        available: true,
-        theme: 'full-green'
+        name: 'BAUDHUIN Elise',
+        specialty: 'Psychologue CS',
+        image: '/assets/feerima/hero3.png',
     },
     {
         id: 4,
-        name: 'Dr. Ravi Bec',
+        name: 'DONGO Angèle',
+        specialty: 'Maîtresse de maison',
+        image: '/assets/feerima/hero4.png',
+    },
+    {
+        id: 5,
+        name: 'GARDIMAN Alexandra',
+        specialty: 'Orthophoniste',
+        image: '/assets/feerima/hero.png',
+    },
+    {
+        id: 6,
+        name: 'HOUNDJI Fulgence',
+        specialty: 'Éducateur spécialisé',
+        image: '/assets/feerima/hero2.png',
+    },
+    {
+        id: 7,
+        name: 'KOUADIO Yao Etienne',
+        specialty: 'Art-thérapeute',
+        image: '/assets/feerima/hero3.png',
+    },
+    {
+        id: 8,
+        name: 'MANOUAN ép GRAH Ange Charlotte',
+        specialty: 'Éducatrice spécialisée',
+        image: '/assets/feerima/hero4.png',
+    },
+    {
+        id: 9,
+        name: 'MANOUAN Ludovic',
         specialty: 'Psychologue',
-        rating: 4.5,
-        reviews: 108,
-        image: '/assets/feerima/Image%20medecin%204.png',
-        available: true,
-        theme: 'cyan'
+        image: '/assets/feerima/hero.png',
+    },
+    {
+        id: 10,
+        name: 'MESSAN Bhipeu Emmanuel',
+        specialty: 'Coach sportif',
+        image: '/assets/feerima/hero2.png',
+    },
+    {
+        id: 11,
+        name: 'N’GUESSAN Olivia',
+        specialty: 'Pédopsychiatre',
+        image: '/assets/feerima/hero3.png',
+    },
+    {
+        id: 12,
+        name: 'YAO ép KONAN Olga',
+        specialty: 'Secrétaire médicale',
+        image: '/assets/feerima/hero4.png',
     }
 ];
 
@@ -80,9 +113,7 @@ export default function Professionals() {
             <main className="professionals-content">
                 <div className="professionals-grid">
                     {doctors.map((doc) => (
-                        <div key={doc.id} className={`doctor-card ${doc.theme}`}>
-                            {doc.available && <span className="availability-badge">● Disponible</span>}
-
+                        <div key={doc.id} className="doctor-card">
                             <div className="doctor-image-container">
                                 {/* The shape/background logic will be handled in CSS */}
                                 <img src={doc.image} alt={doc.name} className="doctor-image" />
@@ -91,18 +122,8 @@ export default function Professionals() {
                             <div className="doctor-info">
                                 <h3>{doc.name}</h3>
                                 <span className="doctor-specialty">{doc.specialty}</span>
-
-                                {doc.rating && (
-                                    <div className="doctor-rating">
-                                        {renderStars(doc.rating)}
-                                        <span className="review-count">({doc.reviews})</span>
-                                    </div>
-                                )}
-                                {/* For the full green card, rating might be different or usually at bottom, 
-                     but following the mockup structure roughly */}
-                                {!doc.rating && <div className="doctor-rating-spacer">({doc.reviews})</div>}
-
-                                <button className="doctor-btn">Pour votre bien-être</button>
+                                <div className="doctor-rating-spacer"></div> {/* Just for spacing instead of reviews */}
+                                <button className="doctor-btn">En savoir plus</button>
                             </div>
                         </div>
                     ))}

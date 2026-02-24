@@ -277,6 +277,14 @@
     direction: ltr;
 }
 
+.service-text-col h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #b0c428;
+    /* FéeRima green */
+    margin-bottom: 12px;
+}
+
 .service-text-col p {
     font-size: 1rem;
     line-height: 1.8;

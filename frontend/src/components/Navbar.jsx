@@ -9,11 +9,11 @@ const navItems = [
     items: [
       { label: 'Historique', to: '/historique' },
       { label: 'Les professionnels', to: '/professionnels' },
-      { label: 'Nos valeurs', to: '#' },
-      { label: 'Notre engagement qualité', to: '#' },
-      { label: 'RSE', to: '#' },
+      { label: 'Nos valeurs', to: '/nos-valeurs' },
+      { label: 'Notre engagement qualité', to: '/engagement-qualite' },
+      { label: 'RSE', to: '/rse' },
       { label: 'Actualités', to: '/actualites' },
-      { label: 'Partenaires', to: '#' },
+      { label: 'Partenaires', to: '/partenaires' },
     ]
   },
   {

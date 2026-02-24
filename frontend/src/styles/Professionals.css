@@ -7,6 +7,8 @@
 
 .professionals-content {
     flex: 1;
+    margin-top: 60px;
+    /* Space between banner and cards */
 }
 
 .professionals-header {
@@ -28,9 +30,9 @@
 
 .professionals-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -38,24 +40,28 @@
 .doctor-card {
     background: white;
     border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 16px 16px 30px 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    /* Softer shadow */
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+    /* Slight border to match look */
 }
 
 .doctor-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 .availability-badge {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    background: #f0f0f0;
+    top: 25px;
+    left: 25px;
+    background: rgba(255, 255, 255, 0.9);
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -64,6 +70,7 @@
     align-items: center;
     gap: 5px;
     z-index: 2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .availability-badge::before {
@@ -74,128 +81,74 @@
 
 .doctor-image-container {
     width: 100%;
-    height: 220px;
+    /* Let the height be determined by aspect ratio of image or set fixed */
+    height: 240px;
     border-radius: 12px;
+    /* Soft rounded corners */
     overflow: hidden;
-    margin-bottom: 15px;
-    background-color: #f0f0f0;
-    /* Default fallback */
+    margin-bottom: 24px;
+    background-color: #f5f5f5;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    /* Align image to bottom usually looks better for portraits */
+    align-items: center;
 }
-
-/* Specific Card Themes */
-/* Cyan Theme (Card 1 & 4) */
-.doctor-card.cyan .doctor-image-container {
-    background-color: #00d2ff;
-}
-
-/* Green Theme (Card 2) */
-.doctor-card.green .doctor-image-container {
-    background-color: #9dbf39;
-}
-
-/* Full Green Theme (Card 3) */
-.doctor-card.full-green {
-    background-color: #9dbf39;
-    color: white;
-}
-
-.doctor-card.full-green .doctor-image-container {
-    background-color: transparent;
-    /* Image sits directly on card bg */
-    height: auto;
-    margin-bottom: 0;
-}
-
-.doctor-card.full-green .doctor-image {
-    border-radius: 50%;
-    /* Often full colored cards have circular images or different style, let's assume square for now based on grid */
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.doctor-card.full-green h3,
-.doctor-card.full-green .doctor-specialty,
-.doctor-card.full-green .review-count {
-    color: white;
-}
-
-.doctor-card.full-green .doctor-btn {
-    background: white;
-    color: #9dbf39;
-}
-
 
 .doctor-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center top;
 }
 
 .doctor-info {
     text-align: center;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
 }
 
 .doctor-info h3 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    font-family: 'Arial', sans-serif;
     font-weight: 700;
-    margin: 10px 0 5px;
-    color: #222;
+    margin: 0 0 12px 0;
+    color: #1a1a1a;
 }
 
 .doctor-specialty {
     display: block;
-    font-size: 0.9rem;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.95rem;
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 24px;
 }
 
-.doctor-rating {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 15px;
-    color: #ffd700;
-    /* Gold stars */
-}
-
-.review-count {
-    color: #999;
-    font-size: 0.85rem;
-    margin-left: 5px;
+.doctor-rating-spacer {
+    display: none;
+    /* remove for now since we have margin */
 }
 
 .doctor-btn {
     background: transparent;
     border: 1px solid #00d2ff;
     color: #00d2ff;
-    padding: 8px 20px;
-    border-radius: 25px;
+    padding: 10px 0;
+    /* Padding top bottom, width handles sides */
+    border-radius: 30px;
     cursor: pointer;
     font-weight: 600;
-    margin-top: 10px;
+    font-size: 0.95rem;
     transition: all 0.3s;
-    width: 100%;
-}
-
-.doctor-card.green .doctor-btn {
-    border-color: #9dbf39;
-    color: #9dbf39;
+    width: 60%;
+    /* No max width so it spans full width of card content area */
+    font-family: 'Arial', sans-serif;
 }
 
 .doctor-btn:hover {
-    background: #00d2ff;
-    color: white;
-}
-
-.doctor-card.green .doctor-btn:hover {
-    background: #9dbf39;
-    color: white;
+    background: rgba(0, 210, 255, 0.1);
+    color: #00d2ff;
 }
 
 .professionals-footer-action {
@@ -218,17 +171,4 @@
 
 .btn-see-more:hover {
     background: #00b4db;
-}
-
-/* Stars */
-.star.full {
-    color: #ffc107;
-}
-
-.star.half {
-    color: #ffc107;
-}
-
-.star.empty {
-    color: #e4e5e9;
 }
