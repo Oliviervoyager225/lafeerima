@@ -38,7 +38,7 @@
     align-items: center;
     gap: 0;
     width: max-content;
-    animation: scrollQuotes 260s linear infinite;
+    animation: scrollQuotes 390s linear infinite;
     will-change: transform;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .quote-text {
-    font-size: 0.88rem;
+    font-size: 1.32rem;
     font-style: italic;
     color: #4a3728;
     font-family: 'Georgia', serif;
@@ -65,7 +65,7 @@
 }
 
 .quote-author {
-    font-size: 0.82rem;
+    font-size: 1.23rem;
     font-weight: 700;
     color: #8B4513;
     margin-left: 8px;
@@ -100,14 +100,14 @@
     }
 
     .quote-text {
-        font-size: 0.82rem;
+        font-size: 1.23rem;
     }
 
     .quote-author {
-        font-size: 0.78rem;
+        font-size: 1.17rem;
     }
 
     .quotes-track {
-        animation-duration: 320s;
+        animation-duration: 480s;
     }
 }

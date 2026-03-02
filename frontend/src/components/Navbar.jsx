@@ -14,35 +14,35 @@ const navItems = [
       { label: 'RSE', to: '/rse' },
       { label: 'Actualités', to: '/actualites' },
       { label: 'Partenaires', to: '/partenaires' },
-    ]
+    ],
   },
   {
     label: "L'offre de soins",
     type: 'dropdown',
     items: [
-      { label: 'Les consultations externes', to: '#' },
-      { label: "L'hôpital de jour", to: '#' },
-      { label: "Le service d'accueil d'urgence", to: '#' },
-      { label: 'Tarifications', to: '#' },
-    ]
+      { label: 'Les consultations externes', to: '/consultations-externes' },
+      { label: "L'hôpital de jour", to: '/hopital-de-jour' },
+      { label: "Le service d'accueil d'urgence", to: '/service-accueil-urgence' },
+      { label: 'Tarifications', to: '/tarifications' },
+    ],
   },
   {
     label: 'Vos droits',
     type: 'dropdown',
     items: [
-      { label: 'Chartes et règlement intérieur', to: '#' },
-      { label: 'Chartes Usager', to: '#' },
-      { label: 'Personne de confiance', to: '#' },
-      { label: 'Sécurité des données personnelles', to: '#' },
-      { label: 'Système de vidéosurveillance', to: '#' },
-      { label: 'Accès à votre dossier médical', to: '#' },
-      { label: 'Plaintes et réclamations', to: '#' },
-      { label: 'Satisfaction', to: '#' },
-    ]
+      { label: 'Chartes et règlement intérieur', to: '/chartes-reglement' },
+      { label: 'Chartes Usager', to: '/chartes-usager' },
+      { label: 'Personne de confiance', to: '/personne-de-confiance' },
+      { label: 'Sécurité des données personnelles', to: '/securite-donnees' },
+      { label: 'Système de vidéosurveillance', to: '/videosurveillance' },
+      { label: 'Accès à votre dossier médical', to: '/dossier-medical' },
+      { label: 'Plaintes et réclamations', to: '/plaintes-reclamations' },
+      { label: 'Satisfaction', to: '/satisfaction' },
+    ],
   },
-  { label: 'FAQ', type: 'link', to: '#' },
-  { label: 'Espace Ressources', type: 'link', to: '#' },
-  { label: 'Pôle Recherche & Innovation', type: 'link', to: '#' },
+  { label: 'FAQ', type: 'link', to: '/faq' },
+  { label: 'Espace Ressources', type: 'link', to: '/espace-ressources' },
+  { label: 'Pôle Recherche & Innovation', type: 'link', to: '/pole-recherche-innovation' },
 ];
 
 export default function Navbar() {
