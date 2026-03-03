@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -24,7 +24,7 @@ export default function SecuriteDonnees() {
                     <div className="hist-content">
                         <h2>NOTRE ENGAGEMENT RGPD</h2>
                         <p>
-                            La FéeRima collecte et traite vos données personnelles dans le strict
+                            La-Fee-Rima collecte et traite vos données personnelles dans le strict
                             respect du Règlement Général sur la Protection des Données (RGPD). Vos
                             informations sont utilisées uniquement dans le cadre de votre prise en
                             charge médicale et ne sont jamais cédées à des tiers non autorisés.
@@ -59,7 +59,7 @@ export default function SecuriteDonnees() {
                         <p>
                             Pour toute demande relative à vos données personnelles, vous pouvez
                             contacter notre Délégué à la Protection des Données (DPO) par courrier
-                            postal adressé à La FéeRima ou par email via notre formulaire de
+                            postal adressé à La-Fee-Rima ou par email via notre formulaire de
                             contact. Une réponse vous sera apportée dans un délai d'un mois.
                         </p>
                     </div>

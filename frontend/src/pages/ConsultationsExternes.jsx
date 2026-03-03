@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -26,7 +26,7 @@ export default function ConsultationsExternes() {
                         <p>
                             Les consultations externes permettent à un jeune de bénéficier d'un
                             suivi psychiatrique ou psychologique sans être hospitalisé. Elles
-                            sont proposées directement au sein de La FéeRima, en journée, sur
+                            sont proposées directement au sein de La-Fee-Rima, en journée, sur
                             rendez-vous. Ce dispositif favorise la continuité des soins tout en
                             maintenant le jeune dans son cadre de vie habituel (école, famille,
                             activités).

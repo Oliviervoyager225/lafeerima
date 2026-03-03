@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -15,7 +15,7 @@ const axes = [
         titre: 'Recherche clinique',
         icone: '📋',
         description:
-            'La FéeRima participe à des études cliniques nationales et internationales visant à mieux comprendre les troubles psychiatriques chez les jeunes et à améliorer les prises en charge.',
+            'La-Fee-Rima participe à des études cliniques nationales et internationales visant à mieux comprendre les troubles psychiatriques chez les jeunes et à améliorer les prises en charge.',
     },
     {
         titre: 'Formation & enseignement',
@@ -51,7 +51,7 @@ export default function PoleRechercheInnovation() {
                     <div className="hist-content">
                         <h2>NOTRE MISSION</h2>
                         <p>
-                            Le Pôle Recherche &amp; Innovation de La FéeRima a pour mission de
+                            Le Pôle Recherche &amp; Innovation de La-Fee-Rima a pour mission de
                             soutenir le développement des connaissances en psychiatrie de l'adolescent
                             et du jeune adulte. En liant étroitement la pratique clinique et la
                             démarche scientifique, nous contribuons à l'amélioration des soins pour
@@ -117,7 +117,7 @@ export default function PoleRechercheInnovation() {
                         <h2>REJOINDRE NOS TRAVAUX</h2>
                         <p>
                             Vous êtes chercheur, interne en psychiatrie ou étudiant en sciences de
-                            la santé ? La FéeRima ouvre ses portes aux profils motivés souhaitant
+                            la santé ? La-Fee-Rima ouvre ses portes aux profils motivés souhaitant
                             contribuer à ses programmes de recherche. Contactez notre pôle pour
                             découvrir les opportunités disponibles.
                         </p>

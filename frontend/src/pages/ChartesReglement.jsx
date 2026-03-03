@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -15,7 +15,7 @@ export default function ChartesReglement() {
             >
                 <div className="page-hero-content">
                     <h1>Chartes et règlement intérieur</h1>
-                    <p>Le cadre de vie et les engagements communs au sein de La FéeRima</p>
+                    <p>Le cadre de vie et les engagements communs au sein de La-Fee-Rima</p>
                 </div>
             </section>
 
@@ -24,7 +24,7 @@ export default function ChartesReglement() {
                     <div className="hist-content">
                         <h2>LE RÈGLEMENT INTÉRIEUR</h2>
                         <p>
-                            Le règlement intérieur de La FéeRima définit les règles de vie
+                            Le règlement intérieur de La-Fee-Rima définit les règles de vie
                             collective applicables à tous les bénéficiaires, familles et
                             professionnels de l'établissement. Il précise les droits et obligations
                             de chacun afin de garantir un environnement de soins sûr, respectueux
@@ -57,7 +57,7 @@ export default function ChartesReglement() {
                     <div className="hist-content center-content">
                         <h2>LES CHARTES EN VIGUEUR</h2>
                         <p>
-                            La FéeRima applique plusieurs chartes fondamentales : la Charte de la
+                            La-Fee-Rima applique plusieurs chartes fondamentales : la Charte de la
                             Personne Hospitalisée, la Charte des Droits et Libertés de la Personne
                             Âgée (adaptée aux mineurs), et notre propre Charte de Bientraitance.
                             Ces textes rappellent les valeurs humanistes qui guident nos pratiques

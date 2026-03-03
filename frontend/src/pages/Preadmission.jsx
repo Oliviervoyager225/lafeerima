@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { admissionService } from '../services/api';
@@ -108,7 +108,7 @@ export default function Preadmission() {
       <main className="preadmission-main">
         <div className="container preadmission-grid">
           <aside className="preadmission-info">
-            <h1>FeeRima Care</h1>
+            <h1>La-Fee-Rima Care</h1>
             <p>
               Afin de faciliter votre accueil, nous vous invitons a remplir ce
               formulaire. Il nous aidera a connaitre votre situation et vos attentes.
@@ -134,7 +134,7 @@ export default function Preadmission() {
               </label>
               <label className="checkbox-row">
                 <input type="checkbox" disabled />
-                Soit a l accueil du Centre specialise La Fee Rima
+                Soit a l accueil du Centre specialise La-Fee-Rima
               </label>
             </div>
           </aside>
@@ -480,7 +480,7 @@ export default function Preadmission() {
                     onChange={handleCheckboxChange}
                     required
                   />
-                  J autorise la Fee Rima a utiliser ces donnees uniquement dans le cadre
+                  J autorise La-Fee-Rima a utiliser ces donnees uniquement dans le cadre
                   de l evaluation et le suivi de ma demande
                 </label>
                 <div className="field-grid">

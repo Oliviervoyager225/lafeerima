@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -26,7 +26,7 @@ export default function Engagement() {
           <div className="hist-content">
             <h1>NOTRE ENGAGEMENT<br />QUALITÉ</h1>
             <p>
-              À La FéeRima, l’ensemble des professionnels s’engage au quotidien pour garantir la qualité et la sécurité des soins.
+              À La-Fee-Rima, l’ensemble des professionnels s’engage au quotidien pour garantir la qualité et la sécurité des soins.
             </p>
             <p>
               Notre centre spécialisé place le bénéficiaire au cœur de toutes nos actions, avec une prise en charge personnalisée, de l’accueil aux soins, en passant par la restauration et les services techniques et administratifs. Nous mettons notre expertise au service de chaque jeune et de sa famille.
@@ -56,7 +56,7 @@ export default function Engagement() {
           <div className="hist-content">
             <h2>ÉVOLUTION<br />CONSTANTE</h2>
             <p>
-              Chez La FéeRima, notre engagement qualité nous permet de faire évoluer constamment nos pratiques, afin d’offrir un accompagnement toujours plus personnalisé, fondé sur l’excellence et l’expertise de nos équipes.
+              Chez La-Fee-Rima, notre engagement qualité nous permet de faire évoluer constamment nos pratiques, afin d’offrir un accompagnement toujours plus personnalisé, fondé sur l’excellence et l’expertise de nos équipes.
             </p>
           </div>
         </section>

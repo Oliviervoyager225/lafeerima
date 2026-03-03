@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -25,7 +25,7 @@ export default function PlaintesReclamations() {
                         <h2>EXPRIMER UNE INSATISFACTION</h2>
                         <p>
                             Si vous avez vécu une situation qui ne correspond pas à vos attentes
-                            ou à nos engagements, vous avez le droit de l'exprimer. La FéeRima
+                            ou à nos engagements, vous avez le droit de l'exprimer. La-Fee-Rima
                             encourage toute démarche visant à améliorer la qualité des soins et
                             de l'accueil. Vos signalements sont traités avec sérieux et
                             confidentialité.

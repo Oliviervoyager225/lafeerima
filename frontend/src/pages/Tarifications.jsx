@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -52,7 +52,7 @@ export default function Tarifications() {
                     <div className="hist-content">
                         <h2>NOS TARIFS ET MODES DE PRISE EN CHARGE</h2>
                         <p>
-                            La FéeRima s'engage à rendre ses soins accessibles à tous. La majorité
+                            La-Fee-Rima s'engage à rendre ses soins accessibles à tous. La majorité
                             de nos prestations sont prises en charge par l'Assurance Maladie
                             obligatoire, sous réserve de disposer d'une prescription médicale et
                             d'être affilié à un régime de Sécurité Sociale.

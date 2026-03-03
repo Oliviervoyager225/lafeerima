@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -26,7 +26,7 @@ export default function Historique() {
           <div className="hist-content">
             <h1>UNE HISTOIRE<br />PERSONNELLE</h1>
             <p>
-              La FéeRima est d’abord née d’une histoire personnelle. Très tôt, j’ai été confrontée à la réalité de la souffrance psychologique, et cette expérience m’a profondément sensibilisée aux enjeux du bien-être mental. J’ai compris à quel point un accompagnement humain, adapté et accessible peut faire la différence.
+              La-Fee-Rima est d’abord née d’une histoire personnelle. Très tôt, j’ai été confrontée à la réalité de la souffrance psychologique, et cette expérience m’a profondément sensibilisée aux enjeux du bien-être mental. J’ai compris à quel point un accompagnement humain, adapté et accessible peut faire la différence.
             </p>
             <p>
               En observant la situation en Côte d’Ivoire, j’ai réalisé que de nombreux jeunes vivent eux aussi des difficultés émotionnelles ou psychologiques, souvent dans le silence, faute de sensibilisation et de structures de prise en charge.
@@ -61,10 +61,10 @@ export default function Historique() {
           <div className="hist-content">
             <h2>MA VISION &<br />MA MISSION</h2>
             <p>
-              Animée par cette conviction, j’ai fondé en 2024, à seulement 19 ans, La FéeRima, une fondation à but non lucratif. Ma mission : sensibiliser le grand public, briser les tabous autour de la santé mentale et développer des solutions concrètes d’accompagnement adaptées à la réalité des jeunes en Côte d’Ivoire.
+              Animée par cette conviction, j’ai fondé en 2024, à seulement 19 ans, La-Fee-Rima, une fondation à but non lucratif. Ma mission : sensibiliser le grand public, briser les tabous autour de la santé mentale et développer des solutions concrètes d’accompagnement adaptées à la réalité des jeunes en Côte d’Ivoire.
             </p>
             <p>
-              À travers le centre spécialisé La FéeRima, je souhaite bâtir un environnement bienveillant, inclusif et innovant, où chaque jeune peut trouver écoute, soutien et accompagnement adapté à sa situation.
+              À travers le centre spécialisé La-Fee-Rima, je souhaite bâtir un environnement bienveillant, inclusif et innovant, où chaque jeune peut trouver écoute, soutien et accompagnement adapté à sa situation.
             </p>
             <p className="emphasis-text">
               Le centre s’inscrit dans la mission globale de la fondation : promouvoir le bien-être psychique des adolescents et jeunes adultes, renforcer la prévention et faciliter l’accès à des soins de qualité.

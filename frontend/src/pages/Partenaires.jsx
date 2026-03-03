@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -26,7 +26,7 @@ export default function Partenaires() {
           <div className="hist-content">
             <h1>ILS NOUS FONT<br />CONFIANCE</h1>
             <p>
-              La FéeRima collabore avec de nombreuses organisations pour mener à bien sa mission. Nous sommes fiers de travailler avec des fondations, des associations, des ONG, des institutions publiques et des universités qui partagent notre engagement pour le bien-être psychologique des jeunes.
+              La-Fee-Rima collabore avec de nombreuses organisations pour mener à bien sa mission. Nous sommes fiers de travailler avec des fondations, des associations, des ONG, des institutions publiques et des universités qui partagent notre engagement pour le bien-être psychologique des jeunes.
             </p>
             <p>
               Découvrez les acteurs engagés à nos côtés pour faire avancer la santé mentale en Côte d'Ivoire.
@@ -56,7 +56,7 @@ export default function Partenaires() {
           <div className="hist-content">
             <h2>MESSAGES DE<br />SOUTIEN</h2>
             <p className="emphasis-text">
-              "Nous soutenons pleinement l'initiative de La FéeRima. Leur approche est essentielle pour répondre aux besoins grandissants des jeunes." - [Partenaire Stratégique]
+              "Nous soutenons pleinement l'initiative de La-Fee-Rima. Leur approche est essentielle pour répondre aux besoins grandissants des jeunes." - [Partenaire Stratégique]
             </p>
           </div>
         </section>

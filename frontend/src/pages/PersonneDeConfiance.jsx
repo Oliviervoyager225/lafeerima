@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -59,7 +59,7 @@ export default function PersonneDeConfiance() {
                         <h2>COMMENT LA DÉSIGNER ?</h2>
                         <p>
                             La désignation s'effectue par écrit lors de votre admission à La
-                            FéeRima, à l'aide du formulaire dédié remis par notre secrétariat.
+                            La-Fee-Rima, à l'aide du formulaire dédié remis par notre secrétariat.
                             Cette désignation est valable pour la durée de votre prise en charge
                             et peut être modifiée ou révoquée à tout moment sur simple demande.
                         </p>

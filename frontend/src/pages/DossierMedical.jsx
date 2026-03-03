@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -58,7 +58,7 @@ export default function DossierMedical() {
                         <h2>COMMENT FAIRE LA DEMANDE ?</h2>
                         <p>
                             La demande doit être adressée par courrier au médecin responsable de
-                            votre prise en charge ou au secrétariat médical de La FéeRima.
+                            votre prise en charge ou au secrétariat médical de La-Fee-Rima.
                             Accompagnez-la d'une copie d'une pièce d'identité. Les documents vous
                             seront communiqués dans un délai de 8 jours (ou 2 mois si les
                             informations datent de plus de 5 ans).

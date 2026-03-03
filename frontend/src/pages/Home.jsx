@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -9,6 +9,7 @@ import '../styles/InfoSection.css';
 import '../styles/InfoSectionFullwidth.css';
 import '../styles/FooterSection.css';
 import '../styles/ContactSection.css';
+import '../styles/ActuSection.css';
 import TypingBubble from '../components/TypingBubble';
 import QuotesBanner from '../components/QuotesBanner';
 import LeafletMap from '../components/LeafletMap';
@@ -108,7 +109,72 @@ const fallbackNews = [
   },
 ];
 
+/* ===== Composant Carousel Actualités ===== */
+const actuSlides = [
+  {
+    img: '/assets/feerima/hero.png',
+    titre: 'Journée portes ouvertes',
+    message: 'Venez rencontrer nos équipes et découvrir La-Fee-Rima lors de notre prochaine journée portes ouvertes.',
+  },
+  {
+    img: '/assets/feerima/hero2.png',
+    titre: 'Atelier bien-être adolescents',
+    message: 'Nos psychologues animent des ateliers hebdomadaires dédiés à la gestion du stress et à la confiance en soi.',
+  },
+  {
+    img: '/assets/feerima/hero3.png',
+    titre: 'Partenariat avec l\'université',
+    message: 'La-Fee-Rima s\'associe à des établissements académiques pour renforcer la recherche en santé mentale juvénile.',
+  },
+  {
+    img: '/assets/feerima/hero4.png',
+    titre: 'Nouveau protocole art-thérapie',
+    message: 'Un nouveau programme créatif rejoint nos outils thérapeutiques pour accompagner les jeunes de façon innovante.',
+  },
+];
+
+function ActuCarousel() {
+  const [index, setIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex(prev => (prev + 1) % actuSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const prev = () => setIndex(i => (i === 0 ? actuSlides.length - 1 : i - 1));
+  const next = () => setIndex(i => (i + 1) % actuSlides.length);
+  const slide = actuSlides[index];
+
+  return (
+    <div className="actu-carousel">
+      <img src={slide.img} alt={slide.titre} className="actu-carousel-img" />
+      <div className="actu-carousel-overlay" />
+      <div className="actu-carousel-caption">
+        <h3>{slide.titre}</h3>
+        <p>{slide.message}</p>
+      </div>
+      <button type="button" className="actu-carousel-btn left" onClick={prev} aria-label="Précédent">‹</button>
+      <button type="button" className="actu-carousel-btn right" onClick={next} aria-label="Suivant">›</button>
+      <div className="actu-carousel-dots">
+        {actuSlides.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            className={`actu-dot ${i === index ? 'active' : ''}`}
+            onClick={() => setIndex(i)}
+            aria-label={`Diapositive ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+/* ===== Fin ActuCarousel ===== */
+
 export default function Home() {
+
   const location = useLocation();
   const navigate = useNavigate();
   const [newsItems, setNewsItems] = useState([]);
@@ -219,7 +285,7 @@ export default function Home() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <h1 className="hero-title">
-                <span className="hero-title-brand">FeeRima</span>
+                <span className="hero-title-brand">La-Fee-Rima</span>
               </h1>
               <p className="hero-subtitle">
                 Votre partenaire de confiance pour la santé mentale des jeunes et
@@ -240,7 +306,7 @@ export default function Home() {
               </div>
             </div>
             <div className="hero-card">
-              <p className="hero-card-title">À la FéeRima</p>
+              <p className="hero-card-title">À La-Fee-Rima</p>
               <p>Un accueil personnalisé et bienveillant</p>
             </div>
           </div>
@@ -280,7 +346,7 @@ export default function Home() {
 
               {/* Left Column: Text & CTA */}
               <div className="contact-text-col">
-                <span className="contact-subtitle">Bienvenue chez FéeRima</span>
+                <span className="contact-subtitle">Bienvenue chez La-Fee-Rima</span>
                 <h2 className="contact-main-title">
                   RAPIDE, FACILE & FIABLE
                   <span className="highlight">CONTACTEZ-NOUS !</span>
@@ -290,11 +356,14 @@ export default function Home() {
                   Un cadre chaleureux, une écoute active et des solutions adaptées
                   à chaque situation.
                 </p>
-                <a href="tel:+212000000000" className="btn-contact">
+                <p style={{ fontSize: '1.1rem', fontWeight: 700, color: '#333', marginBottom: '12px', letterSpacing: '0.02em' }}>
+                  +225 07 00 000 007
+                </p>
+                <a href="tel:+2250700000007" className="btn-contact">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
-                  Appeler le cabinet
+                  Appeler le centre
                 </a>
               </div>
 
@@ -310,7 +379,7 @@ export default function Home() {
 
         {/* Section Services - 3 blocs alternés */}
         <div className="services-section">
-          <h2 className="services-main-title">Nos spécialités</h2>
+          <h2 className="services-main-title">Nos spécificités</h2>
 
           {/* Bloc 1: Équipe pluridisciplinaire */}
           <div className="service-block-row">
@@ -408,65 +477,56 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Section Spécialités - Grille de cartes */}
-          <div className="specialties-grid-section">
-            <h2 className="specialties-grid-title">Toutes nos spécialités</h2>
+          {/* ===== Fin blocs Nos spécificités ===== */}
+        </div>
 
-            <div className="specialties-cards-grid">
-              {/* Carte 1 */}
-              <div className="specialty-grid-card">
-                <div className="specialty-grid-image">
-                  <img src="/assets/feerima/psychotherapist.png" alt="Psychothérapie" />
-                </div>
-                <h3>Psychothérapie</h3>
-                <p>Accompagnement psychologique individuel et de groupe pour adolescents et jeunes adultes.</p>
-              </div>
+        {/* ===== Section Nos actualités (hors services-section) ===== */}
+        <div className="actu-section">
+          <h2 className="actu-main-title">Nos actualités</h2>
 
-              {/* Carte 2 */}
-              <div className="specialty-grid-card">
-                <div className="specialty-grid-image">
-                  <img src="/assets/feerima/educatif.png" alt="Soutien éducatif" />
-                </div>
-                <h3>Soutien éducatif</h3>
-                <p>Programmes éducatifs adaptés pour maintenir la scolarité et favoriser la réussite.</p>
-              </div>
+          {/* Carousel Hero Actualités */}
+          <ActuCarousel />
 
-              {/* Carte 3 */}
-              <div className="specialty-grid-card">
-                <div className="specialty-grid-image">
-                  <img src="/assets/feerima/artistique.png" alt="Activités artistiques" />
+          {/* Grille de cartes actualités */}
+          <div className="actu-cards-grid">
+            {[
+              {
+                img: '/assets/feerima/hero.png',
+                categorie: 'Vie du centre',
+                titre: 'Journée portes ouvertes à La-Fee-Rima',
+                extrait: "Venez découvrir nos équipes et nos espaces de soins lors de notre prochaine journée portes ouvertes. Un moment d'échange et de rencontre pour les jeunes et leurs familles.",
+              },
+              {
+                img: '/assets/feerima/hero2.png',
+                categorie: 'Santé mentale',
+                titre: 'Mieux comprendre les troubles anxieux chez les adolescents',
+                extrait: "La-Fee-Rima vous propose des ressources et des ateliers pour mieux identifier et accompagner les troubles anxieux, de plus en plus fréquents chez les 10-25 ans.",
+              },
+              {
+                img: '/assets/feerima/hero3.png',
+                categorie: 'Innovation',
+                titre: "Nouveau protocole d'art-thérapie au programme",
+                extrait: "Notre équipe pluridisciplinaire intègre de nouvelles approches créatives dans les parcours de soins individualisés, avec des résultats encourageants.",
+              },
+              {
+                img: '/assets/feerima/hero4.png',
+                categorie: 'Partenariat',
+                titre: 'La-Fee-Rima renforce ses partenariats académiques',
+                extrait: "De nouvelles conventions signées avec des universités et instituts de recherche pour enrichir notre pôle Recherche & Innovation et améliorer la prise en charge.",
+              },
+            ].map((actu, i) => (
+              <div key={i} className="actu-card">
+                <div className="actu-card-img">
+                  <img src={actu.img} alt={actu.titre} />
+                  <span className="actu-card-badge">{actu.categorie}</span>
                 </div>
-                <h3>Activités artistiques</h3>
-                <p>Expression créative et art-thérapie pour favoriser le bien-être émotionnel.</p>
-              </div>
-
-              {/* Carte 4 */}
-              <div className="specialty-grid-card">
-                <div className="specialty-grid-image">
-                  <img src="/assets/feerima/sport.png" alt="Sport et bien-être" />
+                <div className="actu-card-body">
+                  <h3>{actu.titre}</h3>
+                  <p>{actu.extrait}</p>
+                  <a href="/actualites" className="actu-card-link">Lire la suite →</a>
                 </div>
-                <h3>Sport et bien-être</h3>
-                <p>Activités physiques et sportives pour renforcer le bien-être physique et mental.</p>
               </div>
-
-              {/* Carte 5 */}
-              <div className="specialty-grid-card">
-                <div className="specialty-grid-image">
-                  <img src="/assets/feerima/soutien familial.png" alt="Soutien familial" />
-                </div>
-                <h3>Soutien familial</h3>
-                <p>Accompagnement des familles et renforcement des liens familiaux.</p>
-              </div>
-
-              {/* Carte 6 */}
-              <div className="specialty-grid-card">
-                <div className="specialty-grid-image">
-                  <img src="/assets/feerima/Thérapies innovantes.png" alt="Thérapies innovantes" />
-                </div>
-                <h3>Thérapies innovantes</h3>
-                <p>Utilisation de méthodes thérapeutiques modernes et adaptées.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 

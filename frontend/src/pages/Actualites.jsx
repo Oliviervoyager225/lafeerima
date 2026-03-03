@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -55,7 +55,7 @@ const articles = [
         id: 6,
         category: 'Innovation',
         title: 'Nouvelles thérapies pour les jeunes',
-        excerpt: 'La FéeRima explore des méthodes innovantes en santé mentale pour répondre aux besoins spécifiques des jeunes d\'aujourd\'hui.',
+        excerpt: 'La-Fee-Rima explore des méthodes innovantes en santé mentale pour répondre aux besoins spécifiques des jeunes d\'aujourd\'hui.',
         image: '/assets/feerima/Thérapies innovantes.png',
         date: '7 Janvier 2026',
         author: 'Dr. Emma Wilson',
@@ -100,7 +100,7 @@ export default function Actualites() {
             >
                 <div className="page-hero-content">
                     <h1>Nos actualités</h1>
-                    <p>Restez informés des dernières nouvelles, conseils et événements de la FéeRima</p>
+                    <p>Restez informés des dernières nouvelles, conseils et événements de La-Fee-Rima</p>
                 </div>
             </section>
 

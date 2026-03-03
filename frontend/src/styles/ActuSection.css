@@ -1,0 +1,281 @@
+/* ===================================================
+   Section Nos Actualités — La-Fee-Rima
+   =================================================== */
+
+/* Wrapper global */
+.actu-section {
+    padding: 60px 0 80px;
+    background: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Titre principal */
+.actu-main-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #b0c428;
+    margin: 0 0 50px 0;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+/* ---- Carousel ---- */
+.actu-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 56px;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 420px;
+    box-shadow: 0 8px 32px rgba(0, 150, 167, 0.2);
+}
+
+.actu-carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.4s ease;
+}
+
+/* Overlay sombre dégradé */
+.actu-carousel-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.72) 0%,
+            rgba(0, 0, 0, 0.25) 55%,
+            transparent 100%);
+    pointer-events: none;
+}
+
+/* Texte en bas à gauche */
+.actu-carousel-caption {
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    right: 120px;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.actu-carousel-tag {
+    display: inline-block;
+    background: #c4d82e;
+    color: #222;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.actu-carousel-caption h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 2vw + 0.8rem, 1.9rem);
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.actu-carousel-caption p {
+    font-size: clamp(0.9rem, 1.2vw + 0.5rem, 1.05rem);
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.5;
+    margin: 0;
+    max-width: 560px;
+}
+
+/* Boutons navigation */
+.actu-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.actu-carousel-btn:hover {
+    background: #00bcd4;
+    border-color: #00bcd4;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.actu-carousel-btn.left {
+    left: 16px;
+}
+
+.actu-carousel-btn.right {
+    right: 16px;
+}
+
+/* Dots */
+.actu-carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.actu-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.actu-dot.active {
+    background: #c4d82e;
+    border-color: #c4d82e;
+    transform: scale(1.3);
+}
+
+/* ---- Grille de cartes actualités ---- */
+.actu-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.actu-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.actu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 150, 167, 0.18);
+}
+
+.actu-card-img {
+    position: relative;
+    height: 190px;
+    overflow: hidden;
+}
+
+.actu-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.actu-card:hover .actu-card-img img {
+    transform: scale(1.06);
+}
+
+.actu-card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.actu-card-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.actu-card-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0;
+    line-height: 1.35;
+}
+
+.actu-card-body p {
+    font-size: 0.9rem;
+    color: #5a5a6e;
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+}
+
+.actu-card-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #0097a7;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease;
+}
+
+.actu-card-link:hover {
+    color: #c4d82e;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .actu-carousel {
+        height: 280px;
+        border-radius: 12px;
+    }
+
+    .actu-carousel-caption {
+        bottom: 40px;
+        left: 20px;
+        right: 70px;
+    }
+
+    .actu-carousel-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1.6rem;
+    }
+
+    .actu-cards-grid {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+    }
+}

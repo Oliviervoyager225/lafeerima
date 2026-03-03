@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -26,7 +26,7 @@ export default function RSE() {
           <div className="hist-content">
             <h1>NOTRE ENGAGEMENT<br />RSE</h1>
             <p>
-              Le centre spécialisé de la FéeRima, dédié au bien-être psychologique des jeunes, place la responsabilité sociétale au cœur de ses actions. Notre engagement RSE reflète notre volonté d’avoir un impact positif sur nos bénéficiaires, nos collaborateurs, la communauté et l’environnement.
+              Le centre spécialisé de La-Fee-Rima, dédié au bien-être psychologique des jeunes, place la responsabilité sociétale au cœur de ses actions. Notre engagement RSE reflète notre volonté d’avoir un impact positif sur nos bénéficiaires, nos collaborateurs, la communauté et l’environnement.
             </p>
             <p>
               <strong>Bien-être et accompagnement des jeunes</strong><br />

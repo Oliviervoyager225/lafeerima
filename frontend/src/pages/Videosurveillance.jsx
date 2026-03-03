@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -24,7 +24,7 @@ export default function Videosurveillance() {
                     <div className="hist-content">
                         <h2>POURQUOI UN SYSTÈME DE VIDÉOSURVEILLANCE ?</h2>
                         <p>
-                            La FéeRima a mis en place un système de vidéosurveillance dans certaines
+                            La-Fee-Rima a mis en place un système de vidéosurveillance dans certaines
                             zones communes de l'établissement (entrées, couloirs, parkings) afin
                             d'assurer la sécurité des patients, des familles et des professionnels.
                             Ce dispositif est déclaré auprès des autorités compétentes conformément

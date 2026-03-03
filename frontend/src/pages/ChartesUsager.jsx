@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -53,7 +53,7 @@ export default function ChartesUsager() {
                     <div className="hist-content center-content">
                         <h2>VOS PRINCIPAUX DROITS</h2>
                         <p>
-                            En tant qu'usager de La FéeRima, vous bénéficiez du droit à
+                            En tant qu'usager de La-Fee-Rima, vous bénéficiez du droit à
                             l'information sur votre état de santé, du droit au consentement libre
                             et éclairé, du droit à la confidentialité, du droit d'accès à votre
                             dossier médical, et du droit de désigner une personne de confiance.

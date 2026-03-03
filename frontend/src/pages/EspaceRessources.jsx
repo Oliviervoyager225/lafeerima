@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -8,7 +8,7 @@ const ressources = [
     {
         categorie: 'Guides et brochures',
         items: [
-            { titre: 'Guide du patient – La FéeRima', description: 'Tout ce que vous devez savoir avant votre première visite.' },
+            { titre: 'Guide du patient – La-Fee-Rima', description: 'Tout ce que vous devez savoir avant votre première visite.' },
             { titre: 'Brochure "Comprendre la psychiatrie adolescente"', description: 'Un document accessible pour les familles.' },
             { titre: "Livret d'accueil", description: "Présentation de l'établissement et de son fonctionnement." },
         ],

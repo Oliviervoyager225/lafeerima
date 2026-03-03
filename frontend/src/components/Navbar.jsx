@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/Navbar.css';
 
@@ -7,13 +7,13 @@ const navItems = [
     label: 'Le centre spécialisé',
     type: 'dropdown',
     items: [
-      { label: 'Historique', to: '/historique' },
-      { label: 'Les professionnels', to: '/professionnels' },
+      { label: 'Notre histoire', to: '/historique' },
+      { label: 'Nos professionnels', to: '/professionnels' },
       { label: 'Nos valeurs', to: '/nos-valeurs' },
       { label: 'Notre engagement qualité', to: '/engagement-qualite' },
-      { label: 'RSE', to: '/rse' },
-      { label: 'Actualités', to: '/actualites' },
-      { label: 'Partenaires', to: '/partenaires' },
+      { label: 'Notre politique RSE', to: '/rse' },
+      { label: 'Nos actualités', to: '/actualites' },
+      { label: 'Nos partenaires', to: '/partenaires' },
     ],
   },
   {
@@ -70,7 +70,7 @@ export default function Navbar() {
     <header className="site-header">
       <div className="container nav-row">
         <Link to="/" className="brand" onClick={closeNav}>
-          <img src="/assets/feerima/news-2.png" alt="FeeRima" className="brand-logo" />
+          <img src="/assets/feerima/news-2.png" alt="La-Fee-Rima" className="brand-logo" />
         </Link>
 
         <button

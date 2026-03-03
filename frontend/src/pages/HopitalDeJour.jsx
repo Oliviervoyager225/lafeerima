@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -25,7 +25,7 @@ export default function HopitalDeJour() {
                         <h2>QU'EST-CE QUE L'HÔPITAL DE JOUR ?</h2>
                         <p>
                             L'hôpital de jour est une forme de soins psychiatriques à temps partiel.
-                            Le jeune est accueilli plusieurs jours par semaine au sein de La FéeRima
+                            Le jeune est accueilli plusieurs jours par semaine au sein de La-Fee-Rima
                             pour bénéficier d'un programme de soins structuré, sans séjourner la nuit.
                             Ce dispositif constitue une alternative à l'hospitalisation complète en
                             maintenant le lien avec l'environnement familial et scolaire.

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -24,7 +24,7 @@ export default function ServiceAccueilUrgence() {
                     <div className="hist-content">
                         <h2>NOTRE SERVICE D'URGENCE PSYCHIATRIQUE</h2>
                         <p>
-                            Le service d'accueil d'urgence de La FéeRima est dédié à la prise en
+                            Le service d'accueil d'urgence de La-Fee-Rima est dédié à la prise en
                             charge immédiate des jeunes de 10 à 25 ans en situation de crise
                             psychiatrique. Notre équipe est formée pour intervenir rapidement, avec
                             calme et bienveillance, afin de sécuriser le patient et d'évaluer sa

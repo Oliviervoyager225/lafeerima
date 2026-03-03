@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/Historique.css';
@@ -6,7 +6,7 @@ import '../styles/PageHero.css';
 
 const faqData = [
     {
-        question: 'Comment prendre un premier rendez-vous à La FéeRima ?',
+        question: 'Comment prendre un premier rendez-vous à La-Fee-Rima ?',
         answer:
             "Vous pouvez contacter notre secrétariat par téléphone ou via le formulaire en ligne sur notre site. Une orientation médicale préalable est recommandée mais pas toujours obligatoire selon la situation.",
     },
@@ -18,7 +18,7 @@ const faqData = [
     {
         question: "Quelles tranches d'âge sont accueillies ?",
         answer:
-            "La FéeRima accompagne les jeunes et adolescents de 10 à 25 ans présentant des besoins en santé mentale.",
+            "La-Fee-Rima accompagne les jeunes et adolescents de 10 à 25 ans présentant des besoins en santé mentale.",
     },
     {
         question: "Peut-on venir sans rendez-vous en cas d'urgence ?",
@@ -28,10 +28,10 @@ const faqData = [
     {
         question: 'Les familles peuvent-elles être impliquées dans le suivi ?',
         answer:
-            "Absolument. La FéeRima encourage la participation des familles dans le parcours de soins. Des consultations familiales et des espaces d'échange sont proposés régulièrement.",
+            "Absolument. La-Fee-Rima encourage la participation des familles dans le parcours de soins. Des consultations familiales et des espaces d'échange sont proposés régulièrement.",
     },
     {
-        question: 'Où se situe La FéeRima ?',
+        question: 'Où se situe La-Fee-Rima ?',
         answer:
             "Retrouvez notre adresse complète, ainsi qu'un plan d'accès, dans la section Contact de notre site ou en bas de page.",
     },
