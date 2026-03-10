@@ -293,19 +293,25 @@
 }
 
 .service-info-btn {
-    background: transparent;
-    border: 2px solid #333;
-    padding: 10px 25px;
+    background-color: #c4d82e;
+    color: #333333;
+    border: none;
+    padding: 10px 28px;
     font-size: 0.9rem;
     font-weight: 600;
+    border-radius: 999px;
     cursor: pointer;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 2px 8px rgba(196, 216, 46, 0.35);
+    display: inline-block;
 }
 
 .service-info-btn:hover {
-    background: #333;
-    color: #fff;
+    background-color: #b0c428;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(196, 216, 46, 0.5);
+    color: #333333;
 }
 
 .service-image-col {
@@ -677,9 +683,9 @@
     }
 
     .service-info-btn {
-        padding: 8px 20px;
+        padding: 8px 22px;
         font-size: 0.85rem;
-        width: 100%;
+        border-radius: 999px;
     }
 
     .service-image-col {

@@ -1,54 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/FooterSection.css';
 
 
 export default function Footer() {
-  const [centerIndex, setCenterIndex] = useState(0);
-
-  // Images pour le carousel "Le centre en image"
-  const centerImages = [
-    '/assets/feerima/centre1.png',
-    '/assets/feerima/centre 2.png',
-    '/assets/feerima/centre 3.png',
-    '/assets/feerima/hero.png'
-  ];
-
-  // Auto-scroll center images every 4 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCenterIndex((prev) => (prev === centerImages.length - 1 ? 0 : prev + 1));
-    }, 4000); // Change image every 4 seconds
-
-    return () => clearInterval(interval);
-  }, [centerImages.length]);
-
   return (
     <section className="footer-section">
       <div className="container footer-grid">
-        {/* Left Column - Le centre en image (Carousel) */}
-        <div className="footer-left">
-          <h3>Le centre en image</h3>
-          <div className="center-carousel">
-            <img
-              key={centerIndex}
-              src={centerImages[centerIndex]}
-              alt="Le centre en image"
-              className="center-carousel-image"
-            />
-          </div>
-        </div>
-
-        {/* Center Column - Description only */}
-        <div className="footer-center">
-          <div className="footer-description">
-            <p>
-              La Fée Rima est un centre spécialisé à Abidjan, dédier à l'accompagnement
-              de la santé mentale des jeunes de 10 à 25 ans
-            </p>
-          </div>
-        </div>
-
         {/* Right Column - Navigation Links */}
         <div className="footer-right">
           <h3>Le centre spécialisé La Fée Rima</h3>
