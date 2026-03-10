@@ -69,12 +69,10 @@
 }
 
 .btn-contact {
-    background-color: #c4d82e;
-    /* Yellow-green from hero */
-    color: #333333;
-    border: none;
+    background-color: transparent;
+    color: #c4d82e;
+    border: 2px solid #c4d82e;
     border-radius: 30px;
-    /* Pill shape like hero button */
     padding: 10px 22px;
     font-size: 0.7rem;
     font-weight: 600;
@@ -89,7 +87,8 @@
 }
 
 .btn-contact:hover {
-    background-color: #b0c428;
+    background-color: #c4d82e;
+    color: #333333;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(196, 216, 46, 0.4);
 }
