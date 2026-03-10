@@ -34,17 +34,46 @@
   display: flex;
   align-items: center;
   gap: 18px;
+  flex-wrap: nowrap;
 }
 
 .nav-link {
   background: transparent;
   border: none;
   font-size: 0.95rem;
+  font-family: 'Lato', sans-serif;
   color: var(--teal-700);
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
+  position: relative;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--teal-600);
+  visibility: hidden;
+  width: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  visibility: visible;
+  width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--teal-600);
 }
 
 .caret {
@@ -68,19 +97,25 @@
   border-radius: 12px;
   box-shadow: var(--card-shadow);
   padding: 12px;
-  display: none;
-  min-width: 220px;
-}
-
-.dropdown-menu.show {
   display: grid;
   gap: 6px;
+  min-width: 220px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .dropdown-item {
   padding: 8px 10px;
   border-radius: 8px;
   font-size: 0.9rem;
+  font-family: 'Lato', sans-serif;
   color: var(--ink-700);
 }
 

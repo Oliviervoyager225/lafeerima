@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap');
 
 :root {
   font-family: 'Source Sans 3', sans-serif;
@@ -66,12 +66,13 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
 }
 
 .btn.primary {
-  background: var(--sage-500);
-  color: #ffffff;
-  box-shadow: 0 10px 20px rgba(138, 162, 74, 0.25);
+  background: #c4d82e;
+  color: #333333;
+  box-shadow: 0 10px 20px rgba(196, 216, 46, 0.25);
 }
 
 .btn.primary.small {
@@ -93,6 +94,7 @@ button {
   background: transparent;
   border: 1px solid rgba(15, 160, 182, 0.4);
   color: var(--teal-700);
+  padding: 10px 18px;
 }
 
 .btn:hover {

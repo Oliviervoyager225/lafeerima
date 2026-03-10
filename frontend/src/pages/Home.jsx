@@ -285,12 +285,9 @@ export default function Home() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <h1 className="hero-title">
-                <span className="hero-title-brand">La Fée Rima</span>
-              </h1>
-              <p className="hero-subtitle">
                 Votre partenaire de confiance pour la santé mentale des jeunes et
                 adolescents de 10-25 ans.
-              </p>
+              </h1>
               <div className="hero-actions">
                 <Link to="/contact" className="btn btn-primary-yellow">
                   Prendre rendez-vous

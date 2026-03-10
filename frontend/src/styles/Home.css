@@ -48,10 +48,11 @@
 
 .hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 3vw + 1.5rem, 4rem);
+  font-size: clamp(0.975rem, 1.17vw + 0.585rem, 1.56rem);
   font-weight: 400;
   line-height: 1.1;
   margin: 0 0 20px 0;
+  color: #ffffff;
 }
 
 .hero-title-brand {
