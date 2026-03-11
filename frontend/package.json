@@ -1,7 +1,7 @@
 {
-  "name": "fullstack-app-frontend",
+  "name": "lafeerima-frontend",
   "version": "1.0.0",
-  "description": "React Frontend for Full Stack App",
+  "description": "React Frontend for Lafeerima",
   "type": "module",
   "scripts": {
     "dev": "vite",

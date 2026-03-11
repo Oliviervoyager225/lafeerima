@@ -6,7 +6,7 @@ services:
     image: postgres:16-alpine
     container_name: postgres-prod
     environment:
-      POSTGRES_DB: ${DB_NAME:-fullstack_db}
+      POSTGRES_DB: ${DB_NAME:-lafeerima_db}
       POSTGRES_USER: ${DB_USER:-postgres}
       POSTGRES_PASSWORD: ${DB_PASSWORD:-secure_password_change_me}
     volumes:
@@ -26,7 +26,7 @@ services:
       dockerfile: Dockerfile
     container_name: backend-prod
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${DB_NAME:-fullstack_db}
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${DB_NAME:-lafeerima_db}
       SPRING_DATASOURCE_USERNAME: ${DB_USER:-postgres}
       SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD:-secure_password_change_me}
       SPRING_JPA_HIBERNATE_DDL_AUTO: validate

@@ -15,7 +15,7 @@
     <groupId>com.example</groupId>
     <artifactId>app-backend</artifactId>
     <version>1.0.0</version>
-    <name>Full Stack App Backend</name>
+    <name>Lafeerima Backend</name>
     <description>Spring Boot Backend API</description>
 
     <properties>

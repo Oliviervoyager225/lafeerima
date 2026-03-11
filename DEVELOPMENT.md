@@ -228,7 +228,7 @@ VITE_API_URL=http://localhost:8080/api
 ### Connect to Database
 
 ```bash
-docker-compose exec postgres psql -U postgres -d fullstack_db
+docker-compose exec postgres psql -U postgres -d lafeerima_db
 ```
 
 ### Common SQL Commands

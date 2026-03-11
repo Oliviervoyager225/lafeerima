@@ -9,7 +9,7 @@ set NC=[0m
 
 echo.
 echo ========================================
-echo Full Stack App Setup
+echo Lafeerima Setup
 echo ========================================
 echo.
 
@@ -86,7 +86,7 @@ echo Useful commands:
 echo   View logs:        docker-compose logs -f
 echo   Stop services:    docker-compose down
 echo   Restart:          docker-compose restart
-echo   DB access:        docker-compose exec postgres psql -U postgres -d fullstack_db
+echo   DB access:        docker-compose exec postgres psql -U postgres -d lafeerima_db
 echo.
 
 endlocal

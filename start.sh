@@ -7,7 +7,7 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 echo -e "${YELLOW}================================${NC}"
-echo -e "${YELLOW}Full Stack App Setup${NC}"
+echo -e "${YELLOW}Lafeerima Setup${NC}"
 echo -e "${YELLOW}================================${NC}\n"
 
 # Check Docker
@@ -78,4 +78,4 @@ echo -e "Useful commands:"
 echo -e "  View logs:        ${YELLOW}docker-compose logs -f${NC}"
 echo -e "  Stop services:    ${YELLOW}docker-compose down${NC}"
 echo -e "  Restart:          ${YELLOW}docker-compose restart${NC}"
-echo -e "  DB access:        ${YELLOW}docker-compose exec postgres psql -U postgres -d fullstack_db${NC}\n"
+echo -e "  DB access:        ${YELLOW}docker-compose exec postgres psql -U postgres -d lafeerima_db${NC}\n"
