@@ -1,0 +1,174 @@
+.professionals-page {
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.professionals-content {
+    flex: 1;
+    margin-top: 60px;
+    /* Space between banner and cards */
+}
+
+.professionals-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.professionals-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.professionals-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.professionals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.doctor-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px 16px 30px 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    /* Softer shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+    /* Slight border to match look */
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.availability-badge {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.availability-badge::before {
+    content: "●";
+    color: #4CAF50;
+    font-size: 0.8rem;
+}
+
+.doctor-image-container {
+    width: 100%;
+    /* Let the height be determined by aspect ratio of image or set fixed */
+    height: 240px;
+    border-radius: 12px;
+    /* Soft rounded corners */
+    overflow: hidden;
+    margin-bottom: 24px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doctor-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.doctor-info {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.doctor-info h3 {
+    font-size: 1.25rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #1a1a1a;
+}
+
+.doctor-specialty {
+    display: block;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.doctor-rating-spacer {
+    display: none;
+    /* remove for now since we have margin */
+}
+
+.doctor-btn {
+    background: transparent;
+    border: 1px solid #00d2ff;
+    color: #00d2ff;
+    padding: 10px 0;
+    /* Padding top bottom, width handles sides */
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    width: 60%;
+    /* No max width so it spans full width of card content area */
+    font-family: 'Arial', sans-serif;
+}
+
+.doctor-btn:hover {
+    background: rgba(0, 210, 255, 0.1);
+    color: #00d2ff;
+}
+
+.professionals-footer-action {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.btn-see-more {
+    background: #00d2ff;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 210, 255, 0.3);
+}
+
+.btn-see-more:hover {
+    background: #00b4db;
+}

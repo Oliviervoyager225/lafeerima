@@ -1,0 +1,202 @@
+/* ===== Main Container ===== */
+.typing-bubble-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 80px 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 60vh;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate; /* ← contexte z-index isolé */
+}
+
+/* ===== Bulles — DERRIÈRE tout ===== */
+.fb {
+  position: absolute;
+  border-radius: 50%;
+  background: #a78bfa;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0; /* en dessous de tout */
+}
+
+.fb-1 {
+  width: 220px;
+  height: 220px;
+  top: -30px;
+  left: -30px;
+  animation: floatBg1 7s ease-in-out infinite;
+}
+
+.fb-2 {
+  width: 170px;
+  height: 170px;
+  bottom: -55px;
+  left: 30px;
+  animation: floatBg2 9s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.fb-3 {
+  width: 130px;
+  height: 130px;
+  bottom: -45px;
+  right: 60px;
+  animation: floatBg3 8s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes floatBg1 {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-25px) scale(1.04); }
+}
+
+@keyframes floatBg2 {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-20px); }
+}
+
+@keyframes floatBg3 {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-18px); }
+}
+
+/* ===== Image — PAR-DESSUS les bulles ===== */
+.typing-profile-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 20px solid #d1d5db;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  display: block;
+  position: relative; /* ← requis pour que z-index fonctionne */
+  z-index: 2;         /* ← par-dessus les bulles */
+}
+
+/* ===== Text Card — PAR-DESSUS les bulles ===== */
+.typing-message-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 40px;
+  border-top-left-radius: 0;
+  max-width: 600px;
+  position: relative; /* ← requis */
+  z-index: 2;         /* ← par-dessus les bulles */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Bubbles image → card ===== */
+.typing-bubble {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 3; /* ← au-dessus de l'image et la carte */
+}
+
+.typing-bubble.small {
+  width: 20px;
+  height: 20px;
+  left: 360px;
+  top: 40%;
+}
+
+.typing-bubble.medium {
+  width: 40px;
+  height: 40px;
+  left: 390px;
+  top: 36%;
+}
+
+.typing-bubble.large {
+  width: 70px;
+  height: 70px;
+  left: 430px;
+  top: 30%;
+}
+
+/* ===== Text Container ===== */
+.typing-text-container {
+  position: relative;
+  width: 100%;
+}
+
+.typing-placeholder {
+  white-space: pre-line;
+  line-height: 1.6;
+  visibility: hidden;
+  margin: 0;
+}
+
+.typing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  white-space: pre-line;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75%      { opacity: 0; }
+}
+
+.typing-signature {
+  margin-top: 20px;
+  font-family: cursive;
+}
+
+/* ===== Tablet (≤ 900px) ===== */
+@media (max-width: 900px) {
+  .typing-bubble-container {
+    flex-direction: column;
+    gap: 32px;
+    padding: 60px 16px;
+    min-height: 50vh;
+    max-width: 95vw;
+  }
+
+  .typing-profile-img { width: 220px; height: 220px; border-width: 12px; }
+  .typing-message-card { padding: 24px; border-radius: 28px; border-top-left-radius: 0; max-width: 95vw; }
+
+  .typing-bubble.small { width: 16px; height: 16px; left: 54%; top: 18%; }
+  .typing-bubble.medium { width: 32px; height: 32px; left: 60%; top: 12%; }
+  .typing-bubble.large { width: 52px; height: 52px; left: 68%; top: 4%; }
+
+  .fb-1 { width: 160px; height: 160px; top: -20px; left: -20px; }
+  .fb-2 { width: 120px; height: 120px; bottom: -40px; left: 20px; }
+  .fb-3 { width: 90px; height: 90px; bottom: -30px; right: 20px; }
+}
+
+/* ===== Mobile (≤ 600px) ===== */
+@media (max-width: 600px) {
+  .typing-bubble-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 4vw;
+    min-height: 40vh;
+    max-width: 100vw;
+  }
+
+  .typing-profile-img { width: 120px; height: 120px; border-width: 6px; }
+  .typing-message-card { padding: 12px; border-radius: 16px; border-top-left-radius: 0; max-width: 100vw; font-size: 0.98rem; }
+  .typing-message-card h2 { font-size: 1.1rem; margin-bottom: 10px; }
+  .typing-signature { margin-top: 10px; font-size: 1rem; }
+
+  .typing-bubble.small { width: 10px; height: 10px; left: 52%; top: 16%; }
+  .typing-bubble.medium { width: 18px; height: 18px; left: 60%; top: 8%; }
+  .typing-bubble.large { width: 28px; height: 28px; left: 70%; top: 0%; }
+  .typing-text-container { font-size: 0.98rem; }
+
+  .fb-1 { width: 100px; height: 100px; top: -15px; left: -15px; }
+  .fb-2 { width: 80px; height: 80px; bottom: -25px; left: 10px; }
+  .fb-3 { width: 60px; height: 60px; bottom: -20px; right: 10px; }
+}

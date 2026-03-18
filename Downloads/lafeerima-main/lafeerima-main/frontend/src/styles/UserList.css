@@ -1,0 +1,133 @@
+.users-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 2em;
+}
+
+.btn-add {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 1.1em;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background: #f8f9fa;
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+table td {
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #666;
+}
+
+table tr:hover {
+  background: #f9f9f9;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit, .btn-delete {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.btn-edit {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.btn-delete {
+  background: #f44336;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #da190b;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .users-container {
+    padding: 20px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+  table th, table td {
+    padding: 10px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

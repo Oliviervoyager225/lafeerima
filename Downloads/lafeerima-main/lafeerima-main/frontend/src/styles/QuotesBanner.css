@@ -1,0 +1,115 @@
+/* ===== Quotes Banner — Bande défilante des citations ===== */
+
+.quotes-banner {
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    box-shadow: 0 4px 16px rgba(0, 188, 212, 0.4);
+    overflow: hidden;
+    padding: 18px 0;
+    border-top: none;
+    border-bottom: none;
+    position: relative;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Fade edges left & right */
+.quotes-banner::before,
+.quotes-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.quotes-banner::before {
+    left: 0;
+    background: linear-gradient(to right, #0097a7, transparent);
+}
+
+.quotes-banner::after {
+    right: 0;
+    background: linear-gradient(to left, #0097a7, transparent);
+}
+
+/* Track — dupliqué ×2 pour boucle infinie */
+.quotes-track {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: max-content;
+    animation: scrollQuotes 390s linear infinite;
+    will-change: transform;
+}
+
+/* Pause au survol */
+.quotes-banner:hover .quotes-track {
+    animation-play-state: paused;
+}
+
+/* Chaque citation */
+.quote-item {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0 24px;
+    flex-shrink: 0;
+}
+
+.quote-text {
+    font-size: 1.32rem;
+    font-style: italic;
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.01em;
+}
+
+.quote-author {
+    font-size: 1.23rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+    margin-left: 8px;
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+}
+
+.quote-separator {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    margin-left: 24px;
+    opacity: 0.8;
+    flex-shrink: 0;
+}
+
+/* Animation */
+@keyframes scrollQuotes {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive — ralentir légèrement sur mobile */
+@media (max-width: 768px) {
+    .quotes-banner {
+        padding: 14px 0;
+    }
+
+    .quote-text {
+        font-size: 1.23rem;
+    }
+
+    .quote-author {
+        font-size: 1.17rem;
+    }
+
+    .quotes-track {
+        animation-duration: 480s;
+    }
+}

@@ -1,0 +1,528 @@
+/* New Info Section Design - Matching Reference Image */
+.info-section {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+    /* Light gray background */
+}
+
+.info-grid-new {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    /* Colonnes réduites de moitié avec espace au milieu */
+    gap: 0;
+    max-width: 100%;
+    padding: 0 40px;
+}
+
+/* Left Side - Contact Section */
+.contact-section {
+    grid-column: 1;
+    /* Première colonne - poussée à gauche */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    background: #f5f0e8;
+    /* Beige/cream background like reference */
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.contact-info .address {
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+.map-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.map-image {
+    max-width: 200px;
+    /* Reduced size for circular icon */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* Circular like reference */
+    object-fit: cover;
+    background: #00a9bc;
+    /* Cyan background for icon */
+    padding: 20px;
+}
+
+.specificites-section {
+    background: transparent;
+    padding: 20px 0;
+    border-radius: 15px;
+}
+
+.specificites-section h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.spec-item {
+    padding: 12px 0;
+    padding-left: 20px;
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    position: relative;
+    border-bottom: none;
+}
+
+.spec-item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #00a9bc;
+    font-weight: bold;
+}
+
+.spec-item:last-child {
+    border-bottom: none;
+}
+
+.spec-item strong {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Right Side - News Panel - Pink background like reference */
+.news-panel-new {
+    grid-column: 3;
+    /* Troisième colonne - poussée à droite */
+    background: #f5e1e8;
+    /* Pink background matching reference */
+    border-radius: 30px;
+    padding: 35px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.news-title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #8b5a70;
+    /* Darker pink for title */
+    margin-bottom: 30px;
+}
+
+.news-list-new {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news-card-new {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: visible;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card-new:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* NEWS Badge - Teal square like reference */
+.news-image {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #d6eff3;
+    /* Light cyan background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #00a9bc;
+}
+
+.news-image img {
+    display: none;
+    /* Hide image, show NEWS badge instead */
+}
+
+/* Show NEWS text */
+.news-image::before {
+    content: 'NEWS';
+    font-weight: 700;
+    color: #00a9bc;
+    font-size: 1rem;
+}
+
+.news-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.news-content h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.news-content p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.news-link-new {
+    color: #00a9bc;
+    /* Cyan matching reference */
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    align-self: flex-start;
+    transition: color 0.3s ease;
+}
+
+.news-link-new:hover {
+    color: #007a8a;
+    /* Darker cyan on hover */
+    text-decoration: underline;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - Mobile, Tablette, Petits écrans
+   ======================================== */
+
+/* Tablettes et petits écrans (max-width: 968px) */
+@media (max-width: 968px) {
+    .info-section {
+        padding: 50px 0;
+    }
+
+    .info-grid-new {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 30px;
+    }
+
+    .contact-section {
+        padding: 25px;
+        border-radius: 18px;
+    }
+
+    .contact-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .contact-info p {
+        font-size: 0.95rem;
+    }
+
+    .map-image {
+        max-width: 180px;
+        width: 180px;
+        height: 180px;
+    }
+
+    .news-panel-new {
+        padding: 30px 25px;
+        border-radius: 25px;
+    }
+
+    .news-title {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+
+    .news-card-new {
+        gap: 18px;
+        padding: 18px;
+    }
+}
+
+/* Tablettes portrait et grands mobiles (max-width: 768px) */
+@media (max-width: 768px) {
+    .info-section {
+        padding: 40px 0;
+    }
+
+    .info-grid-new {
+        padding: 0 20px;
+        gap: 25px;
+    }
+
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+        margin: 6px 0;
+    }
+
+    .map-container {
+        padding: 15px;
+    }
+
+    .map-image {
+        max-width: 160px;
+        width: 160px;
+        height: 160px;
+        padding: 15px;
+    }
+
+    .specificites-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 18px;
+    }
+
+    .spec-item {
+        padding: 10px 0;
+        padding-left: 18px;
+        font-size: 0.9rem;
+    }
+
+    .news-panel-new {
+        padding: 25px 20px;
+    }
+
+    .news-title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .news-card-new {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .news-image {
+        width: 100%;
+        height: 120px;
+    }
+
+    .news-content h4 {
+        font-size: 1rem;
+    }
+
+    .news-content p {
+        font-size: 0.85rem;
+    }
+
+    .news-link-new {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile (max-width: 640px) */
+@media (max-width: 640px) {
+    .info-section {
+        padding: 30px 0;
+    }
+
+    .info-grid-new {
+        padding: 0 15px;
+        gap: 20px;
+    }
+
+    .contact-section {
+        padding: 18px;
+        border-radius: 16px;
+        gap: 20px;
+    }
+
+    .contact-info h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .contact-info p {
+        font-size: 0.85rem;
+        margin: 5px 0;
+        line-height: 1.5;
+    }
+
+    .contact-info .address {
+        margin-top: 12px;
+        line-height: 1.6;
+    }
+
+    .map-container {
+        padding: 12px;
+        border-radius: 16px;
+    }
+
+    .map-image {
+        max-width: 140px;
+        width: 140px;
+        height: 140px;
+        padding: 12px;
+    }
+
+    .specificites-section {
+        padding: 15px 0;
+    }
+
+    .specificites-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .spec-item {
+        padding: 8px 0;
+        padding-left: 16px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .news-panel-new {
+        padding: 20px 15px;
+        border-radius: 20px;
+    }
+
+    .news-title {
+        font-size: 1.2rem;
+        margin-bottom: 18px;
+    }
+
+    .news-list-new {
+        gap: 15px;
+    }
+
+    .news-card-new {
+        gap: 12px;
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .news-image {
+        height: 100px;
+    }
+
+    .news-content {
+        gap: 6px;
+    }
+
+    .news-content h4 {
+        font-size: 0.95rem;
+    }
+
+    .news-content p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .news-link-new {
+        font-size: 0.8rem;
+    }
+}
+
+/* Très petits mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+    .info-section {
+        padding: 25px 0;
+    }
+
+    .info-grid-new {
+        padding: 0 10px;
+        gap: 18px;
+    }
+
+    .contact-section {
+        padding: 15px;
+        gap: 18px;
+    }
+
+    .contact-info h3 {
+        font-size: 1rem;
+    }
+
+    .contact-info p {
+        font-size: 0.8rem;
+    }
+
+    .map-image {
+        max-width: 120px;
+        width: 120px;
+        height: 120px;
+        padding: 10px;
+    }
+
+    .specificites-section h3 {
+        font-size: 1rem;
+    }
+
+    .spec-item {
+        font-size: 0.8rem;
+    }
+
+    .news-panel-new {
+        padding: 18px 12px;
+    }
+
+    .news-title {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .news-card-new {
+        padding: 10px;
+    }
+
+    .news-image {
+        height: 90px;
+    }
+
+    .news-content h4 {
+        font-size: 0.9rem;
+    }
+
+    .news-content p {
+        font-size: 0.75rem;
+    }
+
+    .news-link-new {
+        font-size: 0.75rem;
+    }
+}

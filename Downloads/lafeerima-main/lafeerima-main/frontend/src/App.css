@@ -1,0 +1,24 @@
+.app {
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--ink-900);
+}
+
+.loading,
+.error {
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+  font-size: 1.05rem;
+  color: var(--ink-700);
+}
+
+.error {
+  background: var(--rose-100);
+  color: var(--rose-700);
+  padding: 20px;
+  border-radius: 16px;
+  margin: 40px auto;
+  width: min(720px, 92%);
+  box-shadow: var(--card-shadow);
+}

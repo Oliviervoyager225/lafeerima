@@ -1,0 +1,460 @@
+/* =========================================
+   ACTUALITES PAGE
+   ========================================= */
+
+.actualites-page {
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.actualites-content {
+    flex: 1;
+}
+
+.actu-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* ── Section 1 : Grille d'articles ── */
+.actu-articles-section {
+    padding: 70px 0 60px;
+}
+
+.actu-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.actu-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.actu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.actu-card-image {
+    position: relative;
+    height: 190px;
+    overflow: hidden;
+}
+
+.actu-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.actu-card:hover .actu-card-image img {
+    transform: scale(1.05);
+}
+
+.actu-category {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #b0c428;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.actu-card-body {
+    padding: 20px;
+}
+
+.actu-meta {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.actu-card-body h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.actu-excerpt {
+    font-size: 0.88rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.actu-read-more {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #b0c428;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.actu-read-more:hover {
+    color: #8fa01e;
+}
+
+/* ── Section 2 : Stratégie ── */
+.actu-strategy-section {
+    background: #fff;
+    padding: 80px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.actu-strategy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.actu-strategy-left h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.actu-strategy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.actu-strategy-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    color: #444;
+    cursor: pointer;
+    transition: color 0.2s, padding-left 0.2s;
+}
+
+.actu-strategy-list li:hover {
+    color: #b0c428;
+    padding-left: 6px;
+}
+
+.actu-strategy-bold {
+    font-weight: 800;
+    color: #111 !important;
+}
+
+.actu-strategy-right {
+    position: relative;
+}
+
+.actu-strategy-image-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.actu-strategy-image-wrapper img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+}
+
+.actu-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background: rgba(176, 196, 40, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(176, 196, 40, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.actu-play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: #b0c428;
+}
+
+/* ── Section 3 : Mentors ── */
+.actu-mentors-section {
+    padding: 80px 0;
+}
+
+.actu-mentors-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.actu-mentors-subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.actu-mentors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.actu-mentor-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.actu-mentor-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    flex-shrink: 0;
+    border: 3px solid #b0c428;
+}
+
+.actu-mentor-info h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+.actu-mentor-role {
+    display: block;
+    font-size: 0.82rem;
+    color: #b0c428;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.actu-mentor-info p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ── Section 4 : Contact ── */
+.actu-contact-section {
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+.actu-contact-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 70px;
+    padding: 80px 30px 60px;
+}
+
+.actu-contact-form-col h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.actu-contact-form-col>p {
+    color: #666;
+    margin-bottom: 28px;
+    font-size: 0.95rem;
+}
+
+.actu-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.actu-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.actu-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.actu-form-group label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.actu-form-group input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: #222;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.actu-form-group input:focus {
+    border-bottom-color: #b0c428;
+}
+
+.actu-submit-btn {
+    margin-top: 8px;
+    align-self: flex-start;
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 12px 36px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.actu-submit-btn:hover {
+    background: #b0c428;
+}
+
+.actu-contact-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding-top: 10px;
+}
+
+.actu-info-block h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #111;
+    margin-bottom: 14px;
+}
+
+.actu-info-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.actu-info-block ul li,
+.actu-info-block ul a {
+    font-size: 0.9rem;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.actu-info-block ul a:hover {
+    color: #b0c428;
+}
+
+/* Bande contact bas de section */
+.actu-contact-bar {
+    background: #f4f4f4;
+    padding: 30px 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.actu-contact-bar-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.actu-contact-bar strong {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.actu-contact-bar p {
+    font-size: 0.88rem;
+    color: #666;
+    margin: 2px 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .actu-articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .actu-strategy-grid,
+    .actu-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .actu-mentors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actu-contact-bar-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .actu-articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actu-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .actu-contact-bar-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .actu-strategy-left h2,
+    .actu-mentors-section h2,
+    .actu-contact-form-col h2 {
+        font-size: 1.7rem;
+    }
+}
