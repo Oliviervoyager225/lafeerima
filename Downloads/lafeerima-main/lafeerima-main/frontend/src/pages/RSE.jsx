@@ -12,7 +12,7 @@ export default function RSE() {
       {/* Hero Banner */}
       <section
         className="page-hero"
-        style={{ backgroundImage: "url('/assets/feerima/hero8.png')" }}
+        style={{ backgroundImage: "url('/assets/feerima/politique-RSE.jpg')" }}
       >
         <div className="page-hero-content">
           <h1>Notre politique RSE</h1>
@@ -33,12 +33,12 @@ export default function RSE() {
               Nous offrons un accueil respectueux, bienveillant et accessible à tous les jeunes de 10 à 25 ans. Chaque projet de soins est personnalisé, dans le respect de la dignité et de la confidentialité.
             </p>
           </div>
-          <div className="hist-image-box gray-box-large" style={{ backgroundImage: "url('/assets/feerima/hero2.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div className="hist-image-box gray-box-large" style={{ backgroundImage: "url('/assets/feerima/rse.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
         </section>
 
         {/* Section 2: Actions & Conditions */}
         <section className="hist-section section-2">
-          <div className="hist-image-box gray-box-medium" style={{ backgroundImage: "url('/assets/feerima/hero3.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div className="hist-image-box gray-box-medium" style={{ backgroundImage: "url('/assets/feerima/gouvernance-ethique.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
           <div className="hist-content center-content">
             <h2>ÉTHIQUE ET<br />GOUVERNANCE</h2>
             <p>
@@ -48,14 +48,14 @@ export default function RSE() {
               Parce que prendre soin des jeunes, c’est aussi prendre soin de ceux qui les accompagnent, nous favorisons la formation continue, l’esprit d’équipe et le bien-être au travail.
             </p>
           </div>
-          <div className="hist-image-box gray-box-medium" style={{ backgroundImage: "url('/assets/feerima/hero4.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div className="hist-image-box gray-box-medium" style={{ backgroundImage: "url('/assets/feerima/eth_gouv.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
         </section>
 
         {/* Section 3: Environnement */}
         <section className="hist-section section-3">
           <div className="hist-stacked-images">
             <div className="hist-image-box gray-box-small" style={{ backgroundImage: "url('/assets/feerima/hero.png')", backgroundSize: 'cover', backgroundPosition: 'top' }}></div>
-            <div className="hist-image-box gray-box-small" style={{ backgroundImage: "url('/assets/feerima/portrait.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+            <div className="hist-image-box gray-box-small" style={{ backgroundImage: "url('/assets/feerima/durabilité.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
           </div>
           <div className="hist-content">
             <h2>ENVIRONNEMENT ET<br />DURABILITÉ</h2>

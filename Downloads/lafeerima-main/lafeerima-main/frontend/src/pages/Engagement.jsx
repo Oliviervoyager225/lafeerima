@@ -12,7 +12,7 @@ export default function Engagement() {
       {/* Hero Banner */}
       <section
         className="page-hero"
-        style={{ backgroundImage: "url('/assets/feerima/hero8.png')" }}
+        style={{ backgroundImage: "url('/assets/feerima/Engagement-Qualité.jpg')" }}
       >
         <div className="page-hero-content">
           <h1>Notre engagement qualité</h1>
@@ -32,7 +32,7 @@ export default function Engagement() {
               Notre centre spécialisé place le bénéficiaire au cœur de toutes nos actions, avec une prise en charge personnalisée, de l’accueil aux soins, en passant par la restauration et les services techniques et administratifs. Nous mettons notre expertise au service de chaque jeune et de sa famille.
             </p>
           </div>
-          <div className="hist-image-box gray-box-large" style={{ backgroundImage: "url('/assets/feerima/hero4.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div className="hist-image-box gray-box-large" style={{ backgroundImage: "url('/assets/feerima/engagement-equipe.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
         </section>
 
         {/* Section 2: Amélioration continue */}
@@ -51,7 +51,7 @@ export default function Engagement() {
         <section className="hist-section section-3">
           <div className="hist-stacked-images">
             <div className="hist-image-box gray-box-small" style={{ backgroundImage: "url('/assets/feerima/hero.png')", backgroundSize: 'cover', backgroundPosition: 'top' }}></div>
-            <div className="hist-image-box gray-box-small" style={{ backgroundImage: "url('/assets/feerima/portrait.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+            <div className="hist-image-box gray-box-small" style={{ backgroundImage: "url('/assets/feerima/evolution.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
           </div>
           <div className="hist-content">
             <h2>ÉVOLUTION<br />CONSTANTE</h2>

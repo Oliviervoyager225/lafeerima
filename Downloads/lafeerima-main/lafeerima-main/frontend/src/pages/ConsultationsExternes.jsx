@@ -11,7 +11,7 @@ export default function ConsultationsExternes() {
 
             <section
                 className="page-hero"
-                style={{ backgroundImage: "url('/assets/feerima/hero.png')" }}
+                style={{ backgroundImage: "url('/assets/feerima/consultation.jpg')" }}
             >
                 <div className="page-hero-content">
                     <h1>Les consultations externes</h1>

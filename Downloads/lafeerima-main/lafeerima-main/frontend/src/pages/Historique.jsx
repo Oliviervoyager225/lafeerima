@@ -12,7 +12,7 @@ export default function Historique() {
       {/* Hero Banner */}
       <section
         className="page-hero"
-        style={{ backgroundImage: "url('/assets/feerima/hero8.png')" }}
+        style={{ backgroundImage: "url('/assets/feerima/sante-mentale.jpg')" }}
       >
         <div className="page-hero-content">
           <h1>Notre histoire</h1>
@@ -49,14 +49,14 @@ export default function Historique() {
               De cette double expérience — personnelle et collective — est née une conviction forte : chaque adolescent et chaque jeune adulte mérite la chance de mener une vie épanouie grâce à une meilleure santé mentale.
             </p>
           </div>
-          <div className="hist-image-box gray-box-medium" style={{ backgroundImage: "url('/assets/feerima/hero4.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div className="hist-image-box gray-box-medium" style={{ backgroundImage: "url('/assets/feerima/IMG.JPG')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
         </section>
 
         {/* Section 3: Vision et mission */}
         <section className="hist-section section-3">
           <div className="hist-stacked-images">
             <div className="hist-image-box gray-box-small" style={{ backgroundImage: "url('/assets/feerima/hero.png')", backgroundSize: 'cover', backgroundPosition: 'top' }}></div>
-            <div className="hist-image-box gray-box-small" style={{ backgroundImage: "url('/assets/feerima/portrait.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+            <div className="hist-image-box gray-box-small" style={{ backgroundImage: "url('/assets/feerima/mission.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
           </div>
           <div className="hist-content">
             <h2>MA VISION &<br />MA MISSION</h2>

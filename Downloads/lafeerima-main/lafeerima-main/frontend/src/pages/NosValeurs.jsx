@@ -34,7 +34,7 @@ export default function NosValeurs() {
 
         {/* Section 2: L'accueil */}
         <section className="hist-section section-2">
-          <div className="hist-image-box gray-box-medium" style={{ backgroundImage: "url('/assets/feerima/hero.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div className="hist-image-box gray-box-medium" style={{ backgroundImage: "url('/assets/feerima/mental jeunnn.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
           <div className="hist-content center-content">
             <h2>L'ACCUEIL</h2>
             <p>
@@ -48,7 +48,7 @@ export default function NosValeurs() {
         <section className="hist-section section-3">
           <div className="hist-stacked-images">
             <div className="hist-image-box gray-box-small" style={{ backgroundImage: "url('/assets/feerima/hero2.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-            <div className="hist-image-box gray-box-small" style={{ backgroundImage: "url('/assets/feerima/portrait.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+            <div className="hist-image-box gray-box-small" style={{ backgroundImage: "url('/assets/feerima/ecoute.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
           </div>
           <div className="hist-content">
             <h2>L'ÉCOUTE ET<br />LE RESPECT</h2>
